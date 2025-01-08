@@ -1,31 +1,3 @@
-# <span style='color: #d19021'>app</span>iversity <span style='color:OrangeRed'>Workflows </span>
-Workflows can replace the paper forms, Word documents, and PDF files that you are circulating via email to drive **approvals** and **workflow**.
-
-Here's the scenario to think about:
-- A student wants to drop a course.
-- The student needs to fill out a form, and get their instructor's signatures.
-- From there, they may need to have that form forwarded to the department chair or dean for another round of approval.
-- Lastly, the form is forwarded to the registrar, where the request is processed.
-
-This scenario get's repeated within academics countless times - from student requests, faculty travel requests, course scheduling modifications, graduation applications, etc.  
-
-Ten or fifteen years ago, most institutions did this with *paper* forms, where each person along the approval chain needed to sign the document.  There's a certain convenience to this - there's just one copy of the form, and it's easy to fill out.  It's wasteful, and expensive though - and forms get lost.  
-
-Then we all started *digitizing*, and it went something like this:
-- Paper documents were converted into PDFs, but they were really difficult to "sign".  People printed them, filled them out, signed them, scanned them, and emailed them.  This didn't help much!  
-- PDFs were then made "fillable", which helped, since now at least the form data didn't need to to be handwritten anymore!
-- PDFs could be digitally signed - either by drawing a signature, attaching a photo of a drawn signature, or using a *digital signature* that needed to be created and configured on the user's computer.  This seemed right - but of course getting the signatures to reliably work, on everyone's computer, was a nightmare.
-
-Ultimately, we replaced wasteful paper forms with *thousands* of email attachments, IT headaches configuring digital signatures (which really aren't necessary - these aren't exactly legal documents!), and aggravation.  
-
-After all that, those digital documents remain in *everyone's* email archives - there's no repository for them.  There's no **real** paper trail at all!
-
-Some institutions, recognizing the inefficiencies, adopted tools from the legal and real estate industry, which managed the digital signing of documents across approval chains without installation and email forwarding - *but they are expensive*.
-
-<span style='color:OrangeRed'>Workflows </span> offers an alternative.  With workflows, you can easily create your forms and publish them in a searchable listing.  Users can fill forms, and get data prepopulated - which drastically improves accuracy.  You can create approval chains, and the form is instantaneously routed to where it needs to go.  Every step along the way, there is a full audit of who's approving, and when.  All stakeholders can see the status of the approval and workflow.  When the workflow is complete, it's archived and searchable from one place - by everyone.  
-
-Finally, *workflows is free* (although long term retention is limited to paid plans).  It's included in the **Kickstart** package. 
-
 This document is an user guide for getting started with Workflows.  We'll walk you through creating new workflows, defining approval chains, using document attachments, and managing access.  **Let's get started!**
 
 # What's a *Workflow*?
@@ -45,13 +17,13 @@ Remember there are different [categories of stakeholders](./user-categories.html
 
 Only appiversity **users** with the **Workflows** account privilege may create, edit, delete, and rollover workflows.  You can check a user's profile (or your own) to see if if this privilege has been granted:
 
-<img style='width:300px' src='./images/workflow-privy.png'/>
+<img style='width:300px' src='../images/workflow-privy.png'/>
 
 # Creating your first Workflow
 Workflows can be accessed from the institutional home page or the main toolbar.  The cog icon is a short cut to the management area of Workflows, which is where you will create new workflows from.
-<img style='width:300px' src='./images/workflow-config-from-home.png'/>
+<img style='width:300px' src='../images/workflow-config-from-home.png'/>
 
-<img style='width:300px' src='./images/workflow-from-toolbar.png'/>
+<img style='width:300px' src='../images/workflow-from-toolbar.png'/>
 
 Once you arrive at the Workflows screen, you have three tabs at the top:
 
@@ -59,7 +31,7 @@ Once you arrive at the Workflows screen, you have three tabs at the top:
 2. My Workflow Queue - this is where a list of workflows already initiated by you, or that you are an approver on are listed.  Think of this as your "inbox", and also your archive.  We'll talk more about this later after we create a few workflows to use.
 3. Manage Workflows - this is where we will visit first.  It's where we create workflows.  **Note** if you do not have the Workflows privilege, you will not see this tab!
 
-<img style='width:600px' src='./images/manage-workflows.png'/>
+<img style='width:600px' src='../images/manage-workflows.png'/>
 
 **Click New Workflow** to create a new workflow:
 
@@ -82,7 +54,7 @@ Let's start by creating an example for **Course Drop**.  We'll give it a title a
 
 Once you've filled out the necessary data, click **Next** to move on to *submission data**.
 
-<img style='width:600px' src='./images/workflow-create-data.png'/>
+<img style='width:600px' src='../images/workflow-create-data.png'/>
 
 ## Defining Submission Data
 Submission data is the information that the form's initiator must provide to start the workflow.  You are required to provide *instructions*, which can be as simple as "Please fill out all required data", or can include additional contextual information.  The person *starting* this workflow will see these instructions, so consider your audience!  You will have the opportunity to provide instructions to *approvals* separately, these instructions should only be addressing what someone needs to know to *start* or *request* the workflow.
@@ -120,11 +92,11 @@ Adding the student's name (you should probably ask for some other form of more s
 
 For each, select the Text button, and fill out the necessary information. Let's also mark each as *required*.
 
-<img style='width:600px' src='./images/workflow-submission-data.png'/>
+<img style='width:600px' src='../images/workflow-submission-data.png'/>
 
 
-<img style='width:300px' src='./images/workflow-submission-data-text-01.png'/>
-<img style='width:300px' src='./images/workflow-submission-data-text-02.png'/>
+<img style='width:300px' src='../images/workflow-submission-data-text-01.png'/>
+<img style='width:300px' src='../images/workflow-submission-data-text-02.png'/>
 
 etc. etc.
 
@@ -132,13 +104,13 @@ For the choice list describing *why* the course is being dropped, the dialog box
 provide the options users can choose from.  Remember, each option must be separated by **semi-colon**.  
 This does mean that an option cannot have a semi-colon within it, as that is what is used as the delimiter.
 
-<img style='width:300px' src='./images/workflow-submission-data-choice.png'/>
+<img style='width:300px' src='../images/workflow-submission-data-choice.png'/>
 
 #### Display Order
 When someone starts a submission for this workflow, the input fields are displayed in the same order 
 they are listed in on the submission building screen. You can use the up and down arrows to re-order the fields.
 
-<img style='width:300px' src='./images/workflow-submission-data-order.png'/>
+<img style='width:300px' src='../images/workflow-submission-data-order.png'/>
 
 #### What about email address?
 You might be wondering why we aren't capturing the student's email address.  Remember that when someone starts this workflow, *they are required to supply an email address*.  If the user is logged into appiversity (they are in the Users or People groups), then this information is already known.  If they are not logged in, they will be asked to *verify* their email address - which is a simple and fast process that ensures the workflow is being started by the owner of the supplied email address.
@@ -154,7 +126,7 @@ Every approval step will allow the "approver" to (1) **approve** the workflow, s
 
 At all times, the *submitter* will be able to see **who** has the workflow.  This creates much more transparency to workflows - no more emails that go missing!
 
-<img src='./images/workflow-approval-01.png'/>
+<img src='../images/workflow-approval-01.png'/>
 
 In the case of our running example, let's define a **three step** sequence of approval.  First, the instructor of the course approves, then the Dean, and then the Registrar.  
 
@@ -167,7 +139,7 @@ You will also see a similar set of input field choices as you saw when defining 
 
 In our running example, let's ask the instructor to indicate whether or not the student has attended at all.  Maybe this would be important information for financial aid purposes.
 
-<img src='./images/workflow-approval-02.png'/>
+<img src='../images/workflow-approval-02.png'/>
 
 #### Selecting the Approver
 Each approval step can be *open ended*, or a list of **pre-selected** approvers can be identified. 
@@ -181,11 +153,11 @@ For our example, we know that first approver should be an *instructor*.  We can 
 
 Note, the submitter of this workflow will be able to choose anyone belonging to ANY of these roles.
 
-<img src='./images/workflow-approval-03.png'/>
+<img src='../images/workflow-approval-03.png'/>
 
 Click **+Save New Step** to continue.  
 
-<img src='./images/workflow-approval-04.png'/>
+<img src='../images/workflow-approval-04.png'/>
 
 The approval step will be summarized in the display, and you can add a the next step by clicking **+ New Step**.
 
@@ -194,7 +166,7 @@ For this approval step, you might not need anything else from the Dean - just an
 
 In the example institution, there is a Dean role.  We'll select that and move on.
 
-<img src='./images/workflow-approval-05.png'/>
+<img src='../images/workflow-approval-05.png'/>
 
 Click **+Save New Step** to continue.
 
@@ -203,13 +175,13 @@ The final step is the registrar's office, which is where the request will be pro
 
 Click **+Save New Step** to continue.  Note that with all three steps entered, you can remove them by clicking the X button at the right, or re-order them using the arrows on the left.
 
-<img src='./images/workflow-approval-06.png'/>
+<img src='../images/workflow-approval-06.png'/>
 
 ## Completing the Workflow
 At this point, we've created the submission data and approval chain.  We are ready to complete, and since we've marked it as **active** it will be listed in the workflow listings.
 
 Click **Next**.  
 
-<img src='./images/workflow-complete.png'/>
+<img src='../images/workflow-complete.png'/>
 
 Review the workflow carefully, and click **Create Workflow**.  Now the workflow is complete and is available for use!
