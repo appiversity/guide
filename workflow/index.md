@@ -26,5 +26,13 @@ Some institutions, recognizing the inefficiencies, adopted tools from the legal 
 
 Finally, *workflows is free* (although long term retention is limited to paid plans).  It's included in the **Kickstart** package. 
 
-This document is an user guide for getting started with Workflows.  We'll walk you through creating new workflows, defining approval chains, using document attachments, and managing access.  **Let's get started!**
+## Explore Workflow Documentation
+
+- [Creating Workflows](./create-workflow.html) - learn how to create new workflows for your constituents.
+- [Publishing Workflows](./publishing-workflows.md) - learn how to publish searchable workflow listings, allowing anyone to initiate a workflow.
+- [Public Workflows](./public-workflows.md) - explore how students and public (non-affiliated) people interact with public workflows - including email verification and checking on workflow status.
+
+- [Workflow Notifications](./workflow-notifications.md) - learn how users are notified of workflow activity, and what their options are.
+- [Workflow Queue](./workflow-queue.md) - see how your users can quickly find workflows that need their attention, and how they can review archived workflows to leverage a full and accurate "paper trail".
+- [Workflow Approval] - review the features available to approvers, and how workflows flow through approval, revision, and rejection states.
 
