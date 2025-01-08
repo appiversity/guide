@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Creating Workflows - appiversity user guide</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">appiversity user guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>This document is an user guide for getting started with Workflows.  We'll walk you through creating new workflows, defining approval chains, using document attachments, and managing access.  <strong>Let's get started!</strong></p>
+<h1 id="whats-a-workflow"><a class="header" href="#whats-a-workflow">What's a <em>Workflow</em>?</a></h1>
+<p>When we talk about a Workflow, we are referring to the entire process associated around a particular approval or workflow sequence.</p>
+<p>For example, <strong>Course Drop</strong> is a <strong>workflow</strong>.  It requires the <em>initiator</em> (presumably a student) to populate a form documenting which course they are dropping.  This information is then <em>approved</em> or rejected by a sequence of people - the instructor, the chair, the dean.  The information passed to the registrar for processing.  This entire process is a <strong>workflow</strong>, and each step is a <strong>workflow step</strong>.</p>
+<p>Whe we say "Create a workflow", we mean <em>creating the entire process sequence</em>:</p>
+<ol>
+<li>Defining what data needs to be entered to initiate the workflow</li>
+<li>Defining each approval step</li>
+<li>Defining what each approval step may add to the flow.  For example, attaching additional documentation or data.</li>
+</ol>
+<p><strong>Creating a workflow</strong> is different than someone <em>starting</em> a workflow - or <em>initiating a course drop</em>.  Think of <strong>creating a workflow</strong> as <strong>creating</strong> the form.  You do that once (or at least once in a while).</p>
+<h2 id="who-can-create-a-workflow"><a class="header" href="#who-can-create-a-workflow">Who can create a workflow</a></h2>
+<p>Remember there are different <a href="./user-categories.html">categories of stakeholders</a> using appiversity at your institution.  You have <em>people</em>, who are staff members, faculty, employees.  You have students.  You have <em>public</em> people - who are not necessarily associated with the institution at all.  While these stakeholders might <em>start</em> or <em>initiate</em> a workflow, they aren't the people who will be <strong>creating the workflow in the first place</strong>.</p>
+<p>Only appiversity <strong>users</strong> with the <strong>Workflows</strong> account privilege may create, edit, delete, and rollover workflows.  You can check a user's profile (or your own) to see if if this privilege has been granted:</p>
+<img style='width:300px' src='../images/workflow-privy.png'/>
+<h1 id="creating-your-first-workflow"><a class="header" href="#creating-your-first-workflow">Creating your first Workflow</a></h1>
+<p>Workflows can be accessed from the institutional home page or the main toolbar.  The cog icon is a short cut to the management area of Workflows, which is where you will create new workflows from.
+<img style='width:300px' src='../images/workflow-config-from-home.png'/></p>
+<img style='width:300px' src='../images/workflow-from-toolbar.png'/>
+<p>Once you arrive at the Workflows screen, you have three tabs at the top:</p>
+<ol>
+<li>Start a Workflow - this is where you can initiate a workflow that already exists.  Anyone who is in <strong>People</strong> can access this tab, and start a workflow.</li>
+<li>My Workflow Queue - this is where a list of workflows already initiated by you, or that you are an approver on are listed.  Think of this as your "inbox", and also your archive.  We'll talk more about this later after we create a few workflows to use.</li>
+<li>Manage Workflows - this is where we will visit first.  It's where we create workflows.  <strong>Note</strong> if you do not have the Workflows privilege, you will not see this tab!</li>
+</ol>
+<img style='width:600px' src='../images/manage-workflows.png'/>
+<p><strong>Click New Workflow</strong> to create a new workflow:</p>
+<h2 id="defining-workflow-data"><a class="header" href="#defining-workflow-data">Defining Workflow Data</a></h2>
+<p>Workflows consist of <em>workflow data</em>, which is information about the workflow process in general. This includes it's name, a description, and access flags.</p>
+<h3 id="active--inactive"><a class="header" href="#active--inactive">Active / Inactive</a></h3>
+<p>Workflows can be set to <strong>active</strong> or <strong>inactive</strong>.  Active workflows can be started, while inactive workflows cannot.  Keeping a workflow <em>inactive</em> while it is a draft, or until you want to allow access is generally a good idea.  Once a workflow is started by someone, the workflow process itself cannot be deleted.</p>
+<p>Note that workflows can by <strong>rolled</strong> over from AY to AY.  You'll notice that you are activating the new workflow for a given AY.  The workflow will rollover to future AYs (during the normal <a href="./rollover.html">rollover process</a>) with the same Active/Inactive state.</p>
+<h3 id="restricted-vs-public"><a class="header" href="#restricted-vs-public">Restricted vs Public</a></h3>
+<p>Workflows marked as <strong>public</strong> can be initiated by anyone. This setting makes sense when the workflow is something a student would start (an Add/Drop request for a course), or even workflows that might be initiated by completely external people (maybe an inquiry).  "Public" workflows still require the submitter/initiator to provide a verifiable email address, but they do not need to belong to the institution.</p>
+<p>Workflows marked as restricted can only be initiated by an appiversity user, they need to be logged in. This includes anyone with a full <strong>User</strong> account and anyone listed in <strong>People</strong> (ex. faculty, staff).  Restricted makes sense for workflows like a special payment form, or a grade change that can only be initiated by faculty.  Restricted workflows will never be listed in <a href="./publish.html">published</a> listings, they can only be started from within appiversity itself.</p>
+<p>Let's start by creating an example for <strong>Course Drop</strong>.  We'll give it a title and description, and mark it as <strong>active</strong> and <strong>public</strong>, since it may be initiated by a student.</p>
+<p><span style="display: none">GUIDE WATCH OUT:  Students will become users eventually, so this is an area where this guide might need to be updated.  Likewise, once Catalog and Schedule integration are complete, the UX here is going to be updated.</span></p>
+<p>Once you've filled out the necessary data, click <strong>Next</strong> to move on to <em>submission data</em>*.</p>
+<img style='width:600px' src='../images/workflow-create-data.png'/>
+<h2 id="defining-submission-data"><a class="header" href="#defining-submission-data">Defining Submission Data</a></h2>
+<p>Submission data is the information that the form's initiator must provide to start the workflow.  You are required to provide <em>instructions</em>, which can be as simple as "Please fill out all required data", or can include additional contextual information.  The person <em>starting</em> this workflow will see these instructions, so consider your audience!  You will have the opportunity to provide instructions to <em>approvals</em> separately, these instructions should only be addressing what someone needs to know to <em>start</em> or <em>request</em> the workflow.</p>
+<p><span style="display: none">GUIDE WATCH OUT:  This area will need to be updated when Markdown is enabled, and link to the Markdown guide.</span></p>
+<p>Next, you can add <em>submission fields</em> and <em>submission documents</em>.   This is where you have the freedom to reuse as much or as little of your institution's existing processes as you like.</p>
+<h3 id="submission-document-attachments"><a class="header" href="#submission-document-attachments">Submission Document Attachments</a></h3>
+<p>If you already have a PDF or Word Doc that you are happy with, any you just want to use Workflows to manage the approval process, you might want to simply adopt a single submission document here.  You can upload an empty form in this area, and each time someone wants to initiate this workflow they will be asked to download the form (they will be given a link), fill it out, and upload it.  That filled out form will be passed along and viewable to all the approvers.  By using document attachments here, Workflow is removing the need for email forwarding, email attachments, and signatures - but you are <strong>keeping</strong> the data input functionality of your existing forms.</p>
+<p><strong>Note, you can define multiple submission documents</strong> that the submitter must fill out and upload for a single workflow.</p>
+<h3 id="submission-fields"><a class="header" href="#submission-fields">Submission Fields</a></h3>
+<p>You can use submission fields to define data inputs that will be available to users directly, through the web interface.  Using submission fields is a great way to create workflows because they are the fastest way for users to enter data - no downloading, editing, and uploading.  They are also faster to approve, since the submitted data will be displayed in an easy to identify and accessible way to everyone reviewing the workflow.  Submissions fields can be of several types:</p>
+<ul>
+<li>Text - short text input fields, like someone's name.</li>
+<li>Long Text - a longer text input where you might ask the submitter to provide a lengthy explanation or justification of the text.  This won't permit a lot of formatting, so consider submission document attachments if you want to receive elaborate formatting here.</li>
+<li>Number - numeric input field</li>
+<li>Date - date input</li>
+<li>Checkbox - suitable for true/false, yes know.</li>
+<li>Choice - create a list of options for the user to choose from</li>
+</ul>
+<p>You can add any number of submission fields.  Each field will require you to define it's name (primary label visible to the user), description (briefly explains to the submitter specific instructions about this field), and whether or not it is a <strong>required</strong> field.</p>
+<h3 id="hybrid-submission"><a class="header" href="#hybrid-submission">Hybrid Submission</a></h3>
+<p>Of course, you can use <strong>both</strong>.  If there are some forms that you'd like to use PDFs, Word, or any other type of document for, they can be used together with any number of submission fields too.  At each step along the approval chain, all submission data fields and all documents are accessible.</p>
+<p>For demonstration, let's build the Drop Course form so it requires a user to enter their name, the course's title, subject, course number, section number, and an indication of why they were dropping the course - a choice between "The course is not required for me", "The course isn't what I expected", and "Other".  This isn't something you generally find on Course Drop forms, but as an example it gives us a chance to demonstrate the choice list fields.</p>
+<p><span style="display: none">GUIDE WATCH OUT:  Update the data entry here for course selection when catalog integration is complete.</span></p>
+<p>Adding the student's name (you should probably ask for some other form of more specific identifying information), along with course data is best as a series of Text inputs.  Since course numbers sometimes have alphabetical values (such as 101L for 101 w/ Lab, for example), use Text instead of Number if there is <em>any</em> doubt.</p>
+<p>For each, select the Text button, and fill out the necessary information. Let's also mark each as <em>required</em>.</p>
+<img style='width:600px' src='../images/workflow-submission-data.png'/>
+<img style='width:300px' src='../images/workflow-submission-data-text-01.png'/>
+<img style='width:300px' src='../images/workflow-submission-data-text-02.png'/>
+<p>etc. etc.</p>
+<p>For the choice list describing <em>why</em> the course is being dropped, the dialog box will ask you to
+provide the options users can choose from.  Remember, each option must be separated by <strong>semi-colon</strong>.<br />
+This does mean that an option cannot have a semi-colon within it, as that is what is used as the delimiter.</p>
+<img style='width:300px' src='../images/workflow-submission-data-choice.png'/>
+<h4 id="display-order"><a class="header" href="#display-order">Display Order</a></h4>
+<p>When someone starts a submission for this workflow, the input fields are displayed in the same order
+they are listed in on the submission building screen. You can use the up and down arrows to re-order the fields.</p>
+<img style='width:300px' src='../images/workflow-submission-data-order.png'/>
+<h4 id="what-about-email-address"><a class="header" href="#what-about-email-address">What about email address?</a></h4>
+<p>You might be wondering why we aren't capturing the student's email address.  Remember that when someone starts this workflow, <em>they are required to supply an email address</em>.  If the user is logged into appiversity (they are in the Users or People groups), then this information is already known.  If they are not logged in, they will be asked to <em>verify</em> their email address - which is a simple and fast process that ensures the workflow is being started by the owner of the supplied email address.</p>
+<p>The users's email address will be available to anyone reviewing the workflow, at all times.  Therefore, you normally do not need to capture this type of data.</p>
+<p>For restricted workflows - where the workflow can only be created by someone in the Users or People groups, you don't even need to capture their name!  All identifying information about the user who is initiating a restricted workflow is automatically added to every workflow.</p>
+<h2 id="defining-approval-steps"><a class="header" href="#defining-approval-steps">Defining Approval Steps</a></h2>
+<p>Once you've completed the submission data fields (and documents, if you wish), it's time to move on to the approval chain.  Each workflow must have at least <strong>one</strong> approval step.  In the simplest workflow, a submitter may fill out information and submit it to the sole approver - who would approve/reject/process the workflow request without any other input from others.  In other workflows, you might have a much longer sequence of steps - where multiple stakeholders must approve the request before final processing.  On each approval step, you can define <strong>additional</strong> instructions, and also ask for <strong>additional</strong> data to be added to the workflow.</p>
+<p>Every approval step will allow the "approver" to (1) <strong>approve</strong> the workflow, sending it to the <em>next</em> approver, or marking it as complete, (2) <strong>reject</strong> the workflow, marking it as "rejected" and notifying the submitter, or (3) <strong>request revision</strong>, which will send the workflow back to the last person who either approved or submitted the workflow, with a reason for the request.  In all cases, the people who need to know will receive notifications via email that a workflow item is "in their queue" - whether that's because they are the next approver, or because it's been kicked back to them as a request for revision.</p>
+<p>At all times, the <em>submitter</em> will be able to see <strong>who</strong> has the workflow.  This creates much more transparency to workflows - no more emails that go missing!</p>
+<img src='../images/workflow-approval-01.png'/>
+<p>In the case of our running example, let's define a <strong>three step</strong> sequence of approval.  First, the instructor of the course approves, then the Dean, and then the Registrar.</p>
+<p>Start by clicking <strong>+ New Step</strong>.</p>
+<h3 id="approval-step-1---the-instructor"><a class="header" href="#approval-step-1---the-instructor">Approval Step 1 - the instructor</a></h3>
+<p>Every step has a <strong>title</strong> - the <strong>Step Label</strong>.  This will be visible in several places, so try to be descriptive.  In addition, we'll add a description/instruction - which will be visible <strong>to the approver</strong> when the workflow reaches them.</p>
+<p>You will also see a similar set of input field choices as you saw when defining <em>submission data</em>.  Don't be confused - this is not the same!  These define data fields (or documents) that you expect the <strong>approver</strong> to add to the workflow.  This data might be necessary for the <em>next approver</em>, for example.</p>
+<p>In our running example, let's ask the instructor to indicate whether or not the student has attended at all.  Maybe this would be important information for financial aid purposes.</p>
+<img src='../images/workflow-approval-02.png'/>
+<h4 id="selecting-the-approver"><a class="header" href="#selecting-the-approver">Selecting the Approver</a></h4>
+<p>Each approval step can be <em>open ended</em>, or a list of <strong>pre-selected</strong> approvers can be identified.</p>
+<ul>
+<li><strong>No pre-selected approver</strong> - the submitter can select <strong>any</strong> recipient for the approval, from the list of <strong>People</strong> in your institution.  This is the most flexible, but also puts a lot of responsibility on the submitter to determine who their workflow needs to go to first.  You'll want to be extremely clear in your submission instruction when using this option.</li>
+<li><strong>Pre-Selected by role</strong> - Choose this options when the approval should go to people who hold a particular role at the institution - like "faculty", "Dean", or "Registrar".  This will often be the best choice for most institution-wide workflows.</li>
+<li><strong>Pre-Selected by position</strong> - choose this option if the approval should be received by someone holding a specific position, which is a role <strong>tied</strong> to a particular department.  Check out (Roles, Positions &amp; Assignments)[./roles-positions-assignments.html] for help understanding the difference between a Position and a Role.  This is a good option when the form is specific to a certain department.</li>
+<li><strong>Pre-Selected by person</strong> - choose this option when the approval step should be received by a specific individual.  This is the least flexible option, as you'll need to update the workflow if someone change's positions or leaves the institution.</li>
+</ul>
+<p>For our example, we know that first approver should be an <em>instructor</em>.  We can specify this by using the <strong>Pre-Selected by role</strong> option, and adding pre-selections for both Faculty and Adjunct.  Depending on how you set up your roles, you may have different options.</p>
+<p>Note, the submitter of this workflow will be able to choose anyone belonging to ANY of these roles.</p>
+<img src='../images/workflow-approval-03.png'/>
+<p>Click <strong>+Save New Step</strong> to continue.</p>
+<img src='../images/workflow-approval-04.png'/>
+<p>The approval step will be summarized in the display, and you can add a the next step by clicking <strong>+ New Step</strong>.</p>
+<h3 id="approval-step-2---the-dean"><a class="header" href="#approval-step-2---the-dean">Approval Step 2 - the Dean</a></h3>
+<p>For this approval step, you might not need anything else from the Dean - just an approval, rejection, or request for revision.  Approval fields and documents are optional, so you can just move right past this and onto the Pre-Selected Approvals.</p>
+<p>In the example institution, there is a Dean role.  We'll select that and move on.</p>
+<img src='../images/workflow-approval-05.png'/>
+<p>Click <strong>+Save New Step</strong> to continue.</p>
+<h3 id="processing-step-approval-step-3---the-registrar"><a class="header" href="#processing-step-approval-step-3---the-registrar">Processing Step (Approval Step 3) - the Registrar</a></h3>
+<p>The final step is the registrar's office, which is where the request will be processed.  Once again, this step doesn't require the Registrar to add any data, only approval/rejection/revision.</p>
+<p>Click <strong>+Save New Step</strong> to continue.  Note that with all three steps entered, you can remove them by clicking the X button at the right, or re-order them using the arrows on the left.</p>
+<img src='../images/workflow-approval-06.png'/>
+<h2 id="completing-the-workflow"><a class="header" href="#completing-the-workflow">Completing the Workflow</a></h2>
+<p>At this point, we've created the submission data and approval chain.  We are ready to complete, and since we've marked it as <strong>active</strong> it will be listed in the workflow listings.</p>
+<p>Click <strong>Next</strong>.</p>
+<img src='../images/workflow-complete.png'/>
+<p>Review the workflow carefully, and click <strong>Create Workflow</strong>.  Now the workflow is complete and is available for use!</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../workflow/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../workflow/publishing-workflows.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../workflow/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../workflow/publishing-workflows.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
