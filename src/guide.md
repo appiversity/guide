@@ -1,2 +1,2 @@
 # <span style='color: #d19021'>app</span>iversity User Guide
-- [Workflows](./workflow/) - Stop emailing forms and editing PDFs, and start creating auditable approval chains that fit any workflow.
+- <i class='fa-solid fa-arrow-up-short-wide'></i> [Workflows](./workflow/) - Stop emailing forms and editing PDFs, and start creating auditable approval chains that fit any workflow.

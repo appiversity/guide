@@ -5,6 +5,7 @@
     - [Creating Workflows](./workflow/create-workflow.md)
     - [Publishing Workflows](./workflow/publishing-workflows.md)
     - [Public Workflows](./workflow/public-workflows.md)
+    - [Starting Workflows](./workflow/starting-workflow.md)
     - [Workflow Notifications](./workflow/workflow-notifications.md)
     - [Workflow Queue](./workflow/workflow-queue.md)
     - [Workflow Approval](./workflow/approving-workflow.md)

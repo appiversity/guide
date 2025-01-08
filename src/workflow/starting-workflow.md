@@ -1,7 +1,11 @@
-This document is a user guide for starting an existing workflow.  It describes the sequence of steps a user will perform to start a workflow **when they are already logged into appiversity**.  For public workflows - to be started by students or anyone not affiliated with your institution (they do not have an appiversity account), the process will be similar, but you should review the [public workflows guide](./public-workflows.html) instead.
+This document is a user guide for starting an existing workflow.  It describes the sequence of steps a user will perform to start a workflow **when they are already logged into appiversity**.  For public workflows - to be started by students or anyone not affiliated with your institution (they do not have an appiversity account), the process will be similar, but you should review the [public workflows guide](./public-workflows.html) too.
 
 # Finding a Workflow
+All active workflows, whether they are public or restricted, are found in the Start a Workflow tab in the workflow page within appiversity.
 
+<img style='width:600px' src='../images/workflow-start.png'/>
+
+You may search among workflows in the search bar provided.  To start a new workflow, find the one you are looking for and **click Begin**.
 
 # Submission Input
 
