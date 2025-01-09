@@ -7,6 +7,10 @@ title = "appiversity user guide"
 
 [output.html]
 default-theme = "light"
+preferred-dark-theme = "ayu"
+smart-punctuation = true
+git-repository-url = "https://github.com/appiversity/guide"
+cname = "guide.appiversity.com"
 
 [build]
 build-dir = "public"

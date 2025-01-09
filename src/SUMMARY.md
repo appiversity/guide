@@ -1,6 +1,14 @@
 # appiversity User Guide
 - [User Guide](guide.md)
+- [Managing Academic Years](./academic-years/index.md)
+    - [The Active Academic Year](./academic-years/active-ay.md)
+    - [Rollover](./academic-years/rollover.md)
+    - [Stems](./academic-years/stems.md)
+- [Users](./users/index.md)
+    - [User Accounts](./users/accounts.md)
+    - [Privileges](./users/privileges.md)
 - [People &amp; Departments](./departments/index.md)
+    - [Differences between People, Public People, and Users](./departments/people-public-people-users.md)
 - [Workflow](./workflow/index.md)
     - [Creating Workflows](./workflow/create-workflow.md)
     - [Publishing Workflows](./workflow/publishing-workflows.md)
@@ -9,4 +17,5 @@
     - [Workflow Notifications](./workflow/workflow-notifications.md)
     - [Workflow Queue](./workflow/workflow-queue.md)
     - [Workflow Approval](./workflow/approving-workflow.md)
+    - [Workflow Archives](./workflow/workflow-archive.md)
     

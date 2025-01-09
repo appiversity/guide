@@ -1,0 +1,13 @@
+# Managing Academic Years
+Your account always has an *active academic year*, and other inactive years.
+
+Within appiversity, you manage lots of data - and almost all of it is tied to specific academic years.  This is pretty intuitive when you think about course catalog information - courses, degrees, requirements.  Clearly, in order to manage the catalog you need the concept of *current academic year*, and you also need to be able to retain copies of all the data from *previous academic years*.  Moreover, it's likely that throughout the year you will work on updating data for *future academic years*.  The catalog systems must have a way to manage multiple years of data.  
+
+appiversity Catalog of course does this, and allows you to [rollover](./rollover.html) one AY to another.  It also uses [stems](./stems.html) - a concept of *linking* things across years.  This way, there is a built in connection between a the 2024 version of "Intro to Pottery" and the 2025 version - the system understand they are the *same course*, but with potentially *different* details - based on the AY.
+
+**Critically**, appiversity doesn't use academic years, rollover, and stemming **just for catalog data** - these concepts are part of nearly everything.  Faculty and Staff data (and public profiles) can be versioned by year.  Same with departments, and the people and the positions they fill within them.  Workflow (approval forms) are tied to years, so you can change them over time and not lose track of old ones.  Schedule builder uses different listings of timeblocks, classrooms, course and section attributes based on which year you are building.  appiversity allows you to manage all of your academic data *versioned* by academic year.
+
+## Explore Academic Year Documentation
+- [Active Academic Year](./active-ay.md) - learn how to set the current academic year, and what that means for other data and links in the system.
+- [Rolling over Academic Years](./rollover.md) - you don't start from scratch every year, each year is mostly the same as last year - but with some changes.  Rollover let's you move content to new academic years, while preserving some connection between data in different years.
+- [Stemming](./stems.md) - stems are how we let you navigate *years*.  When you are viewing a course in 2026, you can jump to the 2027 version seamlessly.  Stemming happen automatically during rollover.
