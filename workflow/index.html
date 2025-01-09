@@ -34,7 +34,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -126,6 +126,9 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/appiversity/guide" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -154,53 +157,42 @@
                     <main>
                         <h1 id="appiversity-workflows"><a class="header" href="#appiversity-workflows"><span style='color: #d19021'>app</span>iversity <span style='color:OrangeRed'>Workflows </span></a></h1>
 <p>Workflows can replace the paper forms, Word documents, and PDF files that you are circulating via email to drive <strong>approvals</strong> and <strong>workflow</strong>.</p>
-<p>Here's the scenario to think about:</p>
+<p>Here’s the scenario to think about:</p>
 <ul>
 <li>A student wants to drop a course.</li>
-<li>The student needs to fill out a form, and get their instructor's signatures.</li>
+<li>The student needs to fill out a form, and get their instructor’s signature.</li>
 <li>From there, they may need to have that form forwarded to the department chair or dean for another round of approval.</li>
 <li>Lastly, the form is forwarded to the registrar, where the request is processed.</li>
 </ul>
-<p>This scenario get's repeated within academics countless times - from student requests, faculty travel requests, course scheduling modifications, graduation applications, etc.</p>
-<p>Ten or fifteen years ago, most institutions did this with <em>paper</em> forms, where each person along the approval chain needed to sign the document.  There's a certain convenience to this - there's just one copy of the form, and it's easy to fill out.  It's wasteful, and expensive though - and forms get lost.</p>
+<p>This scenario get’s repeated within academics countless times - from student requests, faculty travel requests, course scheduling modifications, graduation applications, etc.</p>
+<p>Ten or fifteen years ago, most institutions did this with <em>paper</em> forms, where each person along the approval chain needed to sign the document.  There’s a certain convenience to this - there’s just one copy of the form, and it’s easy to fill out.  It’s wasteful, and expensive though - and forms get lost.</p>
 <p>Then we all started <em>digitizing</em>, and it went something like this:</p>
 <ul>
-<li>Paper documents were converted into PDFs, but they were really difficult to "sign".  People printed them, filled them out, signed them, scanned them, and emailed them.  This didn't help much!</li>
-<li>PDFs were then made "fillable", which helped, since now at least the form data didn't need to to be handwritten anymore!</li>
-<li>PDFs could be digitally signed - either by drawing a signature, attaching a photo of a drawn signature, or using a <em>digital signature</em> that needed to be created and configured on the user's computer.  This seemed right - but of course getting the signatures to reliably work, on everyone's computer, was a nightmare.</li>
+<li>Paper documents were converted into PDFs, but they were really difficult to “sign”.  People printed them, filled them out, signed them, scanned them, and emailed them.  This didn’t help much!</li>
+<li>PDFs were then made “fillable”, which helped, since now at least the form data didn’t need to to be handwritten anymore!</li>
+<li>PDFs could be digitally signed - either by drawing a signature, attaching a photo of a drawn signature, or using a <em>digital signature</em> that needed to be created and configured on the user’s computer.  This seemed right - but of course getting the signatures to reliably work, on everyone’s computer, was a nightmare.</li>
 </ul>
-<p>Ultimately, we replaced wasteful paper forms with <em>thousands</em> of email attachments, IT headaches configuring digital signatures (which really aren't necessary - these aren't exactly legal documents!), and aggravation.</p>
-<p>After all that, those digital documents remain in <em>everyone's</em> email archives - there's no repository for them.  There's no <strong>real</strong> paper trail at all!</p>
+<p>Ultimately, we replaced wasteful paper forms with <em>thousands</em> of email attachments, IT headaches configuring digital signatures (which really aren’t necessary - these aren’t exactly legal documents!), and aggravation.</p>
+<p>After all that, those digital documents remain in <em>everyone’s</em> email archives - there’s no repository for them.  There’s no <strong>real</strong> paper trail at all!</p>
 <p>Some institutions, recognizing the inefficiencies, adopted tools from the legal and real estate industry, which managed the digital signing of documents across approval chains without installation and email forwarding - <em>but they are expensive</em>.</p>
-<p><span style='color:OrangeRed'>Workflows </span> offers an alternative.  With workflows, you can easily create your forms and publish them in a searchable listing.  Users can fill forms, and get data prepopulated - which drastically improves accuracy.  You can create approval chains, and the form is instantaneously routed to where it needs to go.  Every step along the way, there is a full audit of who's approving, and when.  All stakeholders can see the status of the approval and workflow.  When the workflow is complete, it's archived and searchable from one place - by everyone.</p>
-<p>Finally, <em>workflows is free</em> (although long term retention is limited to paid plans).  It's included in the <strong>Kickstart</strong> package.</p>
+<p><span style='color:OrangeRed'>Workflows </span> offers an alternative.  With workflows, you can easily create your forms and publish them in a searchable listing.  Users can fill forms, and get data prepopulated - which drastically improves accuracy.  You can create approval chains, and the form is instantaneously routed to where it needs to go.  Every step along the way, there is a full audit of who’s approving, and when.  All stakeholders can see the status of the approval and workflow.  When the workflow is complete, it’s archived and searchable from one place - by everyone.</p>
+<p>Finally, <em>workflows is free</em> (although long term retention is limited to paid plans).  It’s included in the <strong>Kickstart</strong> package.</p>
 <h2 id="explore-workflow-documentation"><a class="header" href="#explore-workflow-documentation">Explore Workflow Documentation</a></h2>
 <ul>
-<li>
-<p><a href="./create-workflow.html">Creating Workflows</a> - learn how to create new workflows for your constituents.</p>
-</li>
-<li>
-<p><a href="./publishing-workflows.html">Publishing Workflows</a> - learn how to publish searchable workflow listings, allowing anyone to initiate a workflow.</p>
-</li>
-<li>
-<p><a href="./public-workflows.html">Public Workflows</a> - explore how students and public (non-affiliated) people interact with public workflows - including email verification and checking on workflow status.</p>
-</li>
-<li>
-<p><a href="./workflow-notifications.html">Workflow Notifications</a> - learn how users are notified of workflow activity, and what their options are.</p>
-</li>
-<li>
-<p><a href="./workflow-queue.html">Workflow Queue</a> - see how your users can quickly find workflows that need their attention, and how they can review archived workflows to leverage a full and accurate "paper trail".</p>
-</li>
-<li>
-<p>[Workflow Approval] - review the features available to approvers, and how workflows flow through approval, revision, and rejection states.</p>
-</li>
+<li><a href="./create-workflow.html">Creating Workflows</a> - learn how to create new workflows for your constituents.</li>
+<li><a href="./publishing-workflows.html">Publishing Workflows</a> - learn how to publish searchable workflow listings, allowing anyone to initiate a workflow.</li>
+<li><a href="./public-workflows.html">Public Workflows</a> - explore how students and public (non-affiliated) people interact with public workflows - including email verification and checking on workflow status.</li>
+<li><a href="./starting-workflow.html">Submitting / Starting Workflows</a> - see how forms will be submitted by constituents.</li>
+<li><a href="./workflow-notifications.html">Workflow Notifications</a> - learn how users are notified of workflow activity, and what their options are.</li>
+<li><a href="./workflow-queue.html">Workflow Queue</a> - see how your users can quickly find workflows that need their attention, and how they can review archived workflows to leverage a full and accurate “paper trail”.</li>
+<li><a href="./approving-workflow.html">Workflow Approval</a> - review the features available to approvers, and how workflows flow through approval, revision, and rejection states.</li>
 </ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../departments/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../departments/people-public-people-users.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -214,7 +206,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../departments/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../departments/people-public-people-users.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 

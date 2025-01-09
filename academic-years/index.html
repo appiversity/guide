@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Page not found - appiversity user guide</title>
-        <base href="/">
+        <title>Managing Academic Years - appiversity user guide</title>
 
 
         <!-- Custom HTML head -->
@@ -13,32 +12,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
 
 
         <!-- Provide site root to javascript -->
         <script>
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc.js"></script>
+        <script src="../toc.js"></script>
     </head>
     <body>
     <div id="body-container">
@@ -90,7 +89,7 @@
             <!-- populated by js -->
             <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
             <noscript>
-                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
             </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -124,7 +123,7 @@
                     <h1 class="menu-title">appiversity user guide</h1>
 
                     <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                         <a href="https://github.com/appiversity/guide" title="Git repository" aria-label="Git repository">
@@ -156,14 +155,29 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="managing-academic-years"><a class="header" href="#managing-academic-years">Managing Academic Years</a></h1>
+<p>Your account always has an <em>active academic year</em>, and other inactive years.</p>
+<p>Within appiversity, you manage lots of data - and almost all of it is tied to specific academic years.  This is pretty intuitive when you think about course catalog information - courses, degrees, requirements.  Clearly, in order to manage the catalog you need the concept of <em>current academic year</em>, and you also need to be able to retain copies of all the data from <em>previous academic years</em>.  Moreover, it’s likely that throughout the year you will work on updating data for <em>future academic years</em>.  The catalog systems must have a way to manage multiple years of data.</p>
+<p>appiversity Catalog of course does this, and allows you to <a href="./rollover.html">rollover</a> one AY to another.  It also uses <a href="./stems.html">stems</a> - a concept of <em>linking</em> things across years.  This way, there is a built in connection between a the 2024 version of “Intro to Pottery” and the 2025 version - the system understand they are the <em>same course</em>, but with potentially <em>different</em> details - based on the AY.</p>
+<p><strong>Critically</strong>, appiversity doesn’t use academic years, rollover, and stemming <strong>just for catalog data</strong> - these concepts are part of nearly everything.  Faculty and Staff data (and public profiles) can be versioned by year.  Same with departments, and the people and the positions they fill within them.  Workflow (approval forms) are tied to years, so you can change them over time and not lose track of old ones.  Schedule builder uses different listings of timeblocks, classrooms, course and section attributes based on which year you are building.  appiversity allows you to manage all of your academic data <em>versioned</em> by academic year.</p>
+<h2 id="explore-academic-year-documentation"><a class="header" href="#explore-academic-year-documentation">Explore Academic Year Documentation</a></h2>
+<ul>
+<li><a href="./active-ay.html">Active Academic Year</a> - learn how to set the current academic year, and what that means for other data and links in the system.</li>
+<li><a href="./rollover.html">Rolling over Academic Years</a> - you don’t start from scratch every year, each year is mostly the same as last year - but with some changes.  Rollover let’s you move content to new academic years, while preserving some connection between data in different years.</li>
+<li><a href="./stems.html">Stemming</a> - stems are how we let you navigate <em>years</em>.  When you are viewing a course in 2026, you can jump to the 2027 version seamlessly.  Stemming happen automatically during rollover.</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../guide.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
+                            <a rel="next prefetch" href="../academic-years/active-ay.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -171,7 +185,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../guide.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
+                    <a rel="next prefetch" href="../academic-years/active-ay.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
@@ -184,13 +204,13 @@
         </script>
 
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
 
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
 
         <!-- Custom JS scripts -->
 

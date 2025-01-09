@@ -34,7 +34,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -126,6 +126,9 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/appiversity/guide" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -152,8 +155,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>This document is a user guide for starting an existing <strong>public</strong> workflow.  It describes the sequence of steps a user will perform to start a workflow when they do not have an appiversity account.  This is the situation where you've <a href="./publishing-workflows.html">published a workflow</a> and the form is to be started by students or anyone not affiliated with your institution.</p>
+                        <p>This document is a user guide for starting an existing <strong>public</strong> workflow.  It describes the sequence of steps a user will perform to start a workflow when they do not have an appiversity account.  This is the situation where you’ve <a href="./publishing-workflows.html">published a workflow</a> and the form is to be started by students or anyone not affiliated with your institution.</p>
 <p>Restricted workflows, which require appiversity login, are <a href="./starting-workflow.html">discussed here</a>.</p>
+<h2 id="public-listings-and-active-academic-year"><a class="header" href="#public-listings-and-active-academic-year">Public Listings and Active Academic Year</a></h2>
+<p>Unlike most things in appiversity, workflows are <em>frequently</em> accessed by people who are not logged into the application.  When non-logged in people access workflows, they are typically accessing them via <a href="./publishing-workflows.html">published HTML listings pages</a>, or from links they have saved (for example, in an email).</p>
+<p>Workflows can only be <strong>initiated</strong> or <strong>started</strong> if they belong to the current academic year.  Checkout the workflows section in our <a href="../academic-years/active-ay.html">active AY</a> guide for more details.</p>
 
                     </main>
 

@@ -34,7 +34,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -126,6 +126,9 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/appiversity/guide" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -152,7 +155,23 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h2 id="requesting-a-revision"><a class="header" href="#requesting-a-revision">Requesting a Revision</a></h2>
+<p>When you cannot approve the workflow, but you feel that the information submitted can be corrected, you can choose <strong>Request Revision</strong>.</p>
+<img style='width:600px' src='../images/workflow-revision-resubmit.png'/>
+<p>If you are the first approver, as is the case in the screenshot above, the workflow will return to the <em>submitter</em>.  If you are further down the approval chain, a request for revision will send the workflow back to whoever last approved it.  In both cases, the intended recipient will receive a <a href="./workflow-notifications.html">notification</a>, and your revision <strong>notes</strong> will be visible to that person.  If it is the last approver, they can elect to similarly pass the workflow <strong>back down the chain</strong>, all the way back to the submitter, but requesting another revision.</p>
+<p>In the screenshot below, you can see what the <em>submitter</em> will see when their workflow is returned.  The status is clearly marked as <strong>RETURNED</strong>, and the reason is listed in the <strong>Previous Steps</strong> area of the workflow.</p>
+<img style='width:600px' src='../images/workflow-revision-returned.png'/>
+<h2 id="passing-a-workflow-to-someone-else"><a class="header" href="#passing-a-workflow-to-someone-else">Passing a Workflow to someone else</a></h2>
+<p>There are times where a workflow might arrive in your queue, but you aren’t the best person to review the submission.  This could happen for many reasons:</p>
+<ul>
+<li>You are away, and someone is covering for you.</li>
+<li>The submitter (or previous approver) made an error identifying you as the next recipient.</li>
+<li>You are sharing duties with a colleague, and they are handling the approval.</li>
+</ul>
+<p>Regardless of why, you can <em>always</em> pass off the workflow to someone else.  Just scroll down to the <strong>Pass to another person</strong> area of the workflow, select the person you are looking for, and click <strong>Handoff to Selected Person</strong>.</p>
+<img style='width:600px' src='../images/workflow-handoff.png'/>
+<p>There’s always an audit trail - so the handoff will be listed in the actions taken on this workflow.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
@@ -161,6 +180,9 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next prefetch" href="../workflow/workflow-archive.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -172,6 +194,9 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next prefetch" href="../workflow/workflow-archive.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

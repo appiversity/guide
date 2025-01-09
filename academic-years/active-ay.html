@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Workflow Notifications - appiversity user guide</title>
+        <title>The Active Academic Year - appiversity user guide</title>
 
 
         <!-- Custom HTML head -->
@@ -155,16 +155,55 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="active-academic-year"><a class="header" href="#active-academic-year">Active Academic Year</a></h1>
+<p>Your account always has an <em>active academic year</em>.  This is a global configuration across the entire application, and it is important that you understand how it relates to various features.</p>
+<h2 id="setting-the-active-academic-year"><a class="header" href="#setting-the-active-academic-year">Setting the Active Academic Year</a></h2>
+<p>The academic year is accessible from the AY page - which is linked from the home screen.</p>
+<img style='width:600px' src='../images/ay-page.png'/>
+<p>In order to access the Academic Years page, you need the <strong>rollover</strong> <a href="../users/privileges.html">privilege</a>.  This privilege allows you to change the academic year and rollover data from one year to another.  You should allow a limited set of people to have this privilege, as they can make application-wide changes that can affect <em>public</em> facing content as well as internal.  Although most actions are reversible, your institution will want to coordinate the timing of changing academic years and performing rollovers.</p>
+<p>Form the academic year page, you can change the current year by entering it into the input box as shown.</p>
+<img style='width:600px' src='../images/ay-active-year.png'/>
+<p>This action is completely reversible and non-destructive.</p>
+<h2 id="viewing-active-and-other-years"><a class="header" href="#viewing-active-and-other-years">Viewing active and other years</a></h2>
+<p>Whenever you are using appiversity, you are <em>implicitly</em> viewing (and editing) data associated with a <em>current year</em>.  It’s always clear which year you are working with - it’s at the top right of your screen.</p>
+<img style='width:600px' src='../images/ay-viewing-year.png'/>
+<p>At any time, you can change the year you are viewing, by changing the value and clicking the → button.</p>
+<p>It’s usually pretty important to know that you are viewing a year that is <strong>not the current AY</strong>.  It’s always clear when this is the case, it’s shown at the top of the screen.  You can click the text to switch into the current year at any time.</p>
+<img style='width:600px' src='../images/ay-inactive.png'/>
+<p><strong>Important</strong> - When you change the AY you are viewing while you are viewing a page tied to an AY, appiversity will do it’s best to help you navigate.  For example, if you are viewing a course in the 2025 catalog, and change the year to 2026, if the course you are viewing exists in the 2026 catalog appiversity will automatically switch you to the 2026 version.  If the course doesn’t exist in 2026, you will be shown a list of years the course <em>does</em> exist in.</p>
+<p>Below, we are looking at a course in the 2024 catalog.<br />
+<img style='width:600px' src='../images/course-active.png'/></p>
+<p>When we change the AY to 2023, we see that the course actually isn’t present in the 2023 catalog.  We’re shown a list of years to choose from instead.<br />
+<img style='width:600px' src='../images/course-inactive.png'/></p>
+<p>If the course <em>had</em> existed in 2023, we would have been brought directly to that version.</p>
+<p>All of this is accomplished through <a href="./stems.html">stemming</a>, and for the most part it “just works” - you won’t need to think about it as long as you are using <a href="./rollover.html">rollover</a> to create each year.</p>
+<h3 id="exceptions-to-ay-data"><a class="header" href="#exceptions-to-ay-data">Exceptions to AY data</a></h3>
+<p>There are some exceptions to the rule that everything is tied to academic years.  Anything found in <strong>Settings &amp; defaults</strong> is <em>global</em>.  This includes things like label preferences, and application configuration.  The settings in this area aren’t date based, and wouldn’t make sense to behave one way for one year, and another way for another.</p>
+<p>Another exception is <strong><a href="../users/accounts.html">Users</a></strong>.  Users are people who <em>create, edit, and manage</em> the data of the institution.  They have full accounts on appiversity, with a set of privileges to control who can change what.  <strong>These accounts are not AY-based</strong>.</p>
+<p><strong>Note</strong> - there’s a big difference between <strong>users</strong> and <strong>People</strong>.  <strong><a href="../departments/people-public-people-users.html">People</a></strong> are the people who work at your institution - faculty, staff, etc.  They will use appiversity too - but they use it very differently.  Moreover, <em>they are data</em>, too.  Faculty profiles, and the departments they reside in - for example - <strong>is academic data</strong>, and is tied to academic years.  <strong>People</strong> are tied to AY (they are rolled over, and stemmed), <strong>Users</strong> are not.</p>
+<h2 id="impact-of-changing-ays"><a class="header" href="#impact-of-changing-ays">Impact of changing AYs</a></h2>
+<p>Data for the active year, and for any year after the active year, is considered editable. Data for years before the active year is considered archived. That said, <strong>in most cases</strong>, archived (past) year’s data is still editable, but it is discouraged. In some situation, archived data is locked - such as public profiles of faculty from past years.</p>
+<p>Below are some other implications of changing the AY.</p>
+<h3 id="workflows"><a class="header" href="#workflows">Workflows</a></h3>
+<p>Workflows are tied to academic years, like most things in appiversity.  They can be <a href="./rollover.html">rolled</a> to other academic years, and they are <a href="./stems.html">stemmed</a>.</p>
+<p>Workflows are frequently published via links, and emailed.  It’s common for people to bookmark them as well.  It is common for people to attempt to access (initiate) workflows from previous academic years, because the links are unique for each year.  When this happens,  the user will be prevented from submitting the workflow, and will be advised to visit the workflow found in the <em>current academic year</em>.  They will also be advised to change the bookmark they are using.</p>
+<p>Note, workflows <em>submitted</em> in other academic years are always accessible, and can continue to be worked on.  For example, consider the following situation:</p>
+<ul>
+<li>A faculty member submits a travel request in June 2025, which is part of your institution’s AY 2025.  The workflow is assigned a tracking ID, and the faculty member is emailed a link to view it’s progress.</li>
+<li>The approver (maybe the Dean) is of course away on vacation, and doesn’t take a look at the workflow until mid-July 2025.  July 1 is your institution pivot date, and you have changed the current AY to 2026.</li>
+<li>The workflow <strong>is still active</strong>, and the dean can still take action on it.  If approved, all is well.  If revisions are requested, the faculty member can still resubmit the changes.  <strong>The fact that the workflow is from 2025, and the current AY is 2026, is irrelevant</strong>.</li>
+</ul>
+<p>The above scenario is <strong>different</strong> than if in July 2025, the faculty member attempts to <em>start</em> a workflow that is from AY 2025.  In that case, they are advised that they must instead work with the AY 2026 version of the workflow (if it exists).  If it does not exist, the workflow is unable to be started.</p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../workflow/starting-workflow.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../academic-years/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../workflow/workflow-queue.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../academic-years/rollover.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -174,11 +213,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../workflow/starting-workflow.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../academic-years/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../workflow/workflow-queue.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../academic-years/rollover.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

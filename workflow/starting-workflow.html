@@ -34,7 +34,7 @@
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "ayu" : "light";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="../toc.js"></script>
@@ -126,6 +126,9 @@
                         <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+                        <a href="https://github.com/appiversity/guide" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
 
                     </div>
                 </div>
@@ -158,9 +161,40 @@
 <img style='width:600px' src='../images/workflow-start.png'/>
 <p>You may search among workflows in the search bar provided.  To start a new workflow, find the one you are looking for and <strong>click Begin</strong>.</p>
 <h1 id="submission-input"><a class="header" href="#submission-input">Submission Input</a></h1>
+<p>After clicking begin, a new <strong>workflow instance</strong> will be created and you will be redirected to begin submitting it.  A few details to note:</p>
+<ul>
+<li>The link at the top of your browser will appear differently.  For example, the URL for the screenshot below is http://appiversity.com/flow/fc71721e-6cea-475e-b219-ad2ff34dd1d6.  (Don’t try it, it’s not active anymore :).  This is a <em>permalink</em> to the specific instance of your workflow that you are filling out.</li>
+<li>The interface we’ll walk though now will look the same whether you are logged into appiversity with a <strong>People</strong> account (you are faculty, staff, etc), a students, or a non-affiliated <em>public person</em>.  You’ll get to this screen differently if you are a student or a non-affiliated person, and that’s described <a href="./public-workflows.html">here</a>.</li>
+</ul>
+<img style='width:600px' src='../images/workflow-starting.png'/>
+<p>Take note that the front matter of the workflow always displays the <strong>submitter</strong>, along with the timestamp the workflow was started.  This is displayed on the top left.  The workflow <strong>status</strong> is also always displayed, at the top-right.  When you begin, the workflow is in the <em>pre-subimt</em> stage.</p>
+<h2 id="workflow-stages"><a class="header" href="#workflow-stages">Workflow Stages</a></h2>
+<p>A workflow goes through a lifecycle of stages.</p>
+<ul>
+<li><strong>Pre-Submit</strong> - a workflow that has been started, but the submitter has not yet submitted it for review.  The submitter can return to the workflow at anytime (they will need the link to it), but no one else can access it.</li>
+<li><strong>Submitted</strong> - as soon as the workflow is submitted, it will transition from “submitted” state immediately to “Pending”.  This is just an intermediate step that used internally.</li>
+<li><strong>Pending</strong> - When a workflow is in the pending state, it’s being reviewed.  Depending on how many steps of approval has been defined, many interactions can happen while in the pending state.  Each time an approver passes the workflow to the next approval, the flow is still pending.  If an approver request revision, and it goes <em>back to a previous reviewer</em> - it’s against till pending.</li>
+<li><strong>Returned</strong> - When an approver requests a revision, and there is no previous approver, the flow goes back to the submitter.  The submitter can edit their submission data, and resubmit.</li>
+<li><strong>Rejected</strong> - Any approver can reject the workflow.  This terminates the lifecycle.</li>
+<li><strong>Cancelled</strong> - A submitter can cancel their submission whenever it is in their hands.  This means they can cancel the submission if it is in the <em>pre-submit</em> or <em>returned</em> state.  A user cannot cancel a submission while it is being reviewed by an approver.</li>
+<li><strong>Complete</strong> - The final approver may complete the flow by approving.  This terminates the workflow’s lifecycle.</li>
+</ul>
+<p>You can visualize the lifecycle as follows:</p>
+<img src='../images/flow-lifecycle.png'/>
+<p>All workflows are archived, and can be searched by any appiversity <strong>user</strong>.  Submitters can find their own workflows through the archive, and approvers can do the same.  The only workflows that are <em>not</em> archived are flows that are cancelled before any approver acts on the workflow.</p>
+<p><a href="./workflow-notifications.html">Notifications</a> are triggered on every state change, and every time a workflow is moved into another person’s queue.</p>
+<h2 id="submission-data"><a class="header" href="#submission-data">Submission Data</a></h2>
+<p>Before moving forward, the user will be required to enter all required submission fields, which were defined when the workflow was created.  All of the input fields are found under the “Start Here” section.</p>
+<img src='../images/flow-submit-fields.png'/>
+<h2 id="uploading-submission-documents"><a class="header" href="#uploading-submission-documents">Uploading submission documents</a></h2>
+<p>If the workflow has defined documents for submission, these will be displayed in the submission area.  Required documents block submission until they are uploaded.</p>
+<img style='width:600px' src='../images/workflow-submit-file-upload.png'/>
+<p>Note that if a document was provided as part of the workflow, for example <strong>a legacy form</strong>, it will be available via a link to download.  Here’s an example:</p>
+<img style='width:600px' src='../images/workflow-submit-file-download-upload.png'/>
+<p>In this case, the “Course Prerequisite Form.pdf” document presumably is your institution’s fillable PDF for instructors to request a course prerequisite to be changed in the catalog.  The <strong>submitter</strong> would download it, by clicking the link.  The submitter then fills out the form, and <strong>uploads it</strong> as part of the submission.  This allows you to quickly leverage existing forms within Workflows.</p>
 <h1 id="submitting-the-workflow"><a class="header" href="#submitting-the-workflow">Submitting the Workflow</a></h1>
 <h1 id="next-steps"><a class="header" href="#next-steps">Next steps</a></h1>
-<p>When you are the submitter of a workflow, you'll have full visibility into who is taking what actions on it from that point on.  Check out the following guide topics to learn more:</p>
+<p>When you are the submitter of a workflow, you’ll have full visibility into who is taking what actions on it from that point on.  Check out the following guide topics to learn more:</p>
 <ul>
 <li><a href="./workflow-queue.html">Workflow Queue</a></li>
 <li><a href="./workflow-notifications.html">Workflow Notifications</a></li>
