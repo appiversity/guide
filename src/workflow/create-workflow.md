@@ -1,6 +1,4 @@
-This document is an user guide for getting started with Workflows.  We'll walk you through creating new workflows, defining approval chains, using document attachments, and managing access.  **Let's get started!**
-
-# What's a *Workflow*?
+# What's a <span style='color:OrangeRed'>Workflow</span>?
 When we talk about a Workflow, we are referring to the entire process associated around a particular approval or workflow sequence.  
 
 For example, **Course Drop** is a **workflow**.  It requires the *initiator* (presumably a student) to populate a form documenting which course they are dropping.  This information is then *approved* or rejected by a sequence of people - the instructor, the chair, the dean.  The information passed to the registrar for processing.  This entire process is a **workflow**, and each step is a **workflow step**.
@@ -10,10 +8,10 @@ Whe we say "Create a workflow", we mean *creating the entire process sequence*:
 2. Defining each approval step
 3. Defining what each approval step may add to the flow.  For example, attaching additional documentation or data.
 
-**Creating a workflow** is different than someone *starting* a workflow - or *initiating a course drop*.  Think of **creating a workflow** as **creating** the form.  You do that once (or at least once in a while).
+**Creating a workflow** is different than someone *starting* a workflow - or *initiating a course drop*.  Think of **creating a workflow** as **creating** the form.  You do that once (or at least once in a while).  Then people fill out copies of the form - which is like *starting a workflow* in appiversity.
 
 ## Who can create a workflow
-Remember there are different [categories of stakeholders](./user-categories.html) using appiversity at your institution.  You have *people*, who are staff members, faculty, employees.  You have students.  You have *public* people - who are not necessarily associated with the institution at all.  While these stakeholders might *start* or *initiate* a workflow, they aren't the people who will be **creating the workflow in the first place**.  
+Remember there are different [categories of stakeholders](../departments/people-public-people-users.html) using appiversity at your institution.  You have *people*, who are staff members, faculty, employees.  You have students.  You have *public* people - who are not necessarily associated with the institution at all.  While these stakeholders might *start* or *initiate* a workflow, they aren't the people who will be **creating the workflow in the first place**.  
 
 Only appiversity **users** with the **Workflows** account privilege may create, edit, delete, and rollover workflows.  You can check a user's profile (or your own) to see if if this privilege has been granted:
 
@@ -21,6 +19,7 @@ Only appiversity **users** with the **Workflows** account privilege may create, 
 
 # Creating your first Workflow
 Workflows can be accessed from the institutional home page or the main toolbar.  The cog icon is a short cut to the management area of Workflows, which is where you will create new workflows from.
+
 <img style='width:300px' src='../images/workflow-config-from-home.png'/>
 
 <img style='width:300px' src='../images/workflow-from-toolbar.png'/>
@@ -39,14 +38,16 @@ Once you arrive at the Workflows screen, you have three tabs at the top:
 Workflows consist of *workflow data*, which is information about the workflow process in general. This includes it's name, a description, and access flags.  
 
 ### Active / Inactive
-Workflows can be set to **active** or **inactive**.  Active workflows can be started, while inactive workflows cannot.  Keeping a workflow *inactive* while it is a draft, or until you want to allow access is generally a good idea.  Once a workflow is started by someone, the workflow process itself cannot be deleted.
+Workflows can be set to **active** or **inactive**.  Active workflows can be started, while inactive workflows cannot.  Keeping a workflow *inactive* while it is a draft, or until you want to allow access is generally a good idea.  Once a workflow is started by someone, the workflow process itself cannot be deleted.  **Workflows cannot be edited**, so you will want to review them carefully before activating. 
 
-Note that workflows can by **rolled** over from AY to AY.  You'll notice that you are activating the new workflow for a given AY.  The workflow will rollover to future AYs (during the normal [rollover process](./rollover.html)) with the same Active/Inactive state.
+<span style="display: none">GUIDE WATCH OUT:  Editing workflows is on the roadmap, so this will need to be revisited.</span>
+
+Note that workflows can by **rolled** over from AY to AY.  You'll notice that you are activating the new workflow for a given AY.  The workflow will rollover to future AYs (during the normal [rollover process](../academic-years/rollover.md)) with the same Active/Inactive state.
 
 ### Restricted vs Public
 Workflows marked as **public** can be initiated by anyone. This setting makes sense when the workflow is something a student would start (an Add/Drop request for a course), or even workflows that might be initiated by completely external people (maybe an inquiry).  "Public" workflows still require the submitter/initiator to provide a verifiable email address, but they do not need to belong to the institution.
 
-Workflows marked as restricted can only be initiated by an appiversity user, they need to be logged in. This includes anyone with a full **User** account and anyone listed in **People** (ex. faculty, staff).  Restricted makes sense for workflows like a special payment form, or a grade change that can only be initiated by faculty.  Restricted workflows will never be listed in [published](./publish.html) listings, they can only be started from within appiversity itself.
+Workflows marked as restricted can only be initiated by an appiversity user, they need to be logged in. This includes anyone with a full **User** account and anyone listed in **People** (ex. faculty, staff).  Restricted makes sense for workflows like a special payment form, or a grade change that can only be initiated by faculty.  Restricted workflows will never be listed in [published](../publishing/) listings, they can only be started from within appiversity itself.
 
 Let's start by creating an example for **Course Drop**.  We'll give it a title and description, and mark it as **active** and **public**, since it may be initiated by a student.
 
