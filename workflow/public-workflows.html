@@ -160,12 +160,36 @@
 <h2 id="public-listings-and-active-academic-year"><a class="header" href="#public-listings-and-active-academic-year">Public Listings and Active Academic Year</a></h2>
 <p>Unlike most things in appiversity, workflows are <em>frequently</em> accessed by people who are not logged into the application.  When non-logged in people access workflows, they are typically accessing them via <a href="./publishing-workflows.html">published HTML listings pages</a>, or from links they have saved (for example, in an email).</p>
 <p>Workflows can only be <strong>initiated</strong> or <strong>started</strong> if they belong to the current academic year.  Checkout the workflows section in our <a href="../academic-years/active-ay.html">active AY</a> guide for more details.</p>
+<h2 id="submitting-a-workflow-as-an-unaffiliated-user"><a class="header" href="#submitting-a-workflow-as-an-unaffiliated-user">Submitting a Workflow as an unaffiliated user</a></h2>
+<p>Workflow listings can be published in a variety of ways, but the most common is through an <code>iframe</code> listing, which depending on custom styling may look something like this:</p>
+<img style='width:600px' src='../images/workflow-published-listing.png'/>
+<p>This listing might appear anywhere on your institution’s public-facing website (see <a href="../publishing">publishing</a> in general, and specifically <a href="./publishing-workflows.html">publishing workflows</a>).</p>
+<p>Clicking <strong>Begin</strong> will start the submission process.</p>
+<p>If the user is not logged in, they will be asked to provide their email address.
+<img style='width:600px' src='../images/workflow-public-email-input.png'/></p>
+<p>If the email address does not match an appiversity user, or an institutional (People) user, then appiversity treats this person as an <em>unaffiliated</em> person, or “Public Person”.  If the email address has already been used to register, a one-time-link to access/start their workflow will be <strong>emailed</strong> to them.</p>
+<p>If the email address provided does not match an existing record, they will be prompted to register.  Note that this registration process collects very limited data, it is only used to verify email addresses (see note below).</p>
+<img style='width:600px' src='../images/workflow-public-register.png'/>
+<p>Once the registration information is collected, the user is notified that a one-time-link has been sent to their email address.  This link (and code contained within the email) can be used to continue on to workflow submission.</p>
+<img style='width:600px' src='../images/workflow-public-otl-input.png'/>
+<p>At this point, the workflow form looks the same as if the user was a full appiversity user.  The only difference is the top navigation bar, which <strong>only</strong> contains a <strong>Workflows</strong> drop down listing.  This listing will include all the other workflows (if any) that were submitted by the same email address.</p>
+<p><strong>Note</strong> appiversity takes precautions against SPAM and bot submission of Workflows.  No workflow can be submitted unless the email address provided has been validated, using the one-time-link provided in the email address.  If in the event someone’s email address becomes compromised, and workflow submissions are being created with malicious intent (flooding workflow queues, for example), we can blacklist the email address.  Contact <a href="mailto:support@appiversity.com">support for requests and assistance</a>)</p>
+<h2 id="accessing-a-submitted-workflow-with-a-permalink"><a class="header" href="#accessing-a-submitted-workflow-with-a-permalink">Accessing a Submitted Workflow with a Permalink</a></h2>
+<p>Every workflow submitted is a assigned a globally unique identifier, which is part of it’s <em>permalink</em> URL.  It looks something like this:</p>
+<p><code>https://appiversity.com/flow/57bf73fe-932a-4c71-ad2e-61fab3842057</code></p>
+<p>The alphanumeric string following <code>/flow</code> is called a <em>globally unique identifier</em> and it really is global, and unique.  <a href="https://betterexplained.com/articles/the-quick-guide-to-guids/">It’s nearly impossible to guess</a> - but as an extra layer of security, appiversity will <em>challenge</em> any access to a workflow using the permalink when the user is not already logged into appiversity.  In order to access the workflow, they must know the email address <strong>of the person who submitted the workflow</strong>.</p>
+<img style='width:600px' src='../images/workflow-permalink-challenge.png'/>
+<p>This extra layer makes sure no one can just try to “guess” random permalinks and gain access to workflows.</p>
+<p>Note that when accessing a workflow though this challenge sequence, the user still cannot take any action on the form.  In order to take action (if they are the approver), they will need to login to the system.</p>
+<img style='width:600px' src='../images/workflow-permalink-login.png'/>
+<p>When a permalink is accessed from a web browser where a user is already logged in, the challenge sequence is bypassed, and the user is shown the workflow according to their access level.</p>
+<p>If the logged in user <strong>does not have access</strong> to the workflow however, then the challenge sequence is again shown.  This is a convenient way for people to share read-only access to workflows, they just need to share the permalink <strong>and</strong> the submitter’s email address.  Think of it as a lightweight handoff - you can send someone this information and ask them to take a look at a workflow that isn’t in their queue, just for some advice or assistance, in a read-only fashion.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../workflow/publishing-workflows.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../workflow/create-workflow.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -179,7 +203,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../workflow/publishing-workflows.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../workflow/create-workflow.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 

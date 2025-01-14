@@ -155,7 +155,31 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h2 id="requesting-a-revision"><a class="header" href="#requesting-a-revision">Requesting a Revision</a></h2>
+                        <h1 id="workflow-approval-actions"><a class="header" href="#workflow-approval-actions">Workflow Approval Actions</a></h1>
+<p>When you access a workflow that you are the <strong>current</strong> approver for, you will be able to take action on the workflow.  Whether you access the workflow from a <a href="./public-workflows.html">permalink</a> or from your <a href="./workflow-queue.html">queue</a>, you will see the following information:</p>
+<ul>
+<li>Original submission data, including attachments</li>
+<li>Previous actions (approvals) taken</li>
+<li>All data applied to the workflow by previous approvals/actions, if any</li>
+</ul>
+<img style='width:600px' src='../images/workflow-approval.png'/>
+<h2 id="approval---with-next-step"><a class="header" href="#approval---with-next-step">Approval - with next step</a></h2>
+<p>If after reviewing the submitted materials you are ready to approve the workflow, you will be required to enter any of the required approval data, as defined when the workflow itself was <a href="./create-workflow.html">created</a>.  The <strong>next step</strong>, if any, will be clearly listed.  You will be asked to select the recipient for the next approval step, based on the instruction that were provided:</p>
+<img style='width:600px' src='../images/workflow-approval-approved.png'/>
+<p>You can apply <em>optional</em> approval notes, which will be visible to all (including the submitter).  Once you’ve selected the next recipient, you can click the <strong>Approve / Send to Next Step</strong> button.</p>
+<img style='width:600px' src='../images/workflow-approval-approve-button.png'/>
+<p>At this point, the new recipient will receive a <a href="./workflow-notifications.html">notification</a> and your actions will be visible to anyone viewing the workflow.</p>
+<img style='width:600px' src='../images/workflow-approval-next-step.png'/>
+<h2 id="approval---final-step"><a class="header" href="#approval---final-step">Approval - final step</a></h2>
+<p>On workflows that you are the <strong>final</strong> approver (or the only approval), the interface will be slightly different.  The “Approve” selection will indicate that an approval will <em>complete the workflow</em>.  When you approve, you will <strong>not</strong> be asked to select a recipient, and the submitter themselves will be notified that their workflow has been <strong>completed</strong>.</p>
+<p>Once a workflow is completed, it is considered “successful”.  Any offline processing that was needed should have also been completed.  The workflow will now be available in the <a href="./workflow-archive.html">workflow archive</a> and be accessible to any user with <strong>workflow</strong> privileges, any person who approved / rejected the workflow, and the submitter.</p>
+<h2 id="rejecting-a-workflow"><a class="header" href="#rejecting-a-workflow">Rejecting a workflow</a></h2>
+<p>When you are the next action individual, you also have the option to <em>reject</em> the workflow.  This is the appropriate action to take when the request should be rejected outright, there is no remedy for the request.  Rejecting the workflow requires you to note a reason for the rejection.  This reason is visible to all people (including the submitter).</p>
+<img style='width:600px' src='../images/workflow-approval-reject.png'/>
+<p>On rejection, the <em>submitter</em> is <a href="./workflow-notifications.html">notified</a>.  The workflow is available in the <a href="./workflow-archive.html">workflow archive</a> and accessible to any user with <strong>workflow</strong> privileges, any person who approved / rejected the workflow, and the submitter.  The full approval chain, with rejection reasons is viewable.</p>
+<img style='width:600px' src='../images/workflow-approval-rejected.png'/>
+<p><strong>Rejecting a workflow is final</strong>, the submitter may submit a <em>new</em> workflow if they wish.  If you, as the reviewer, believe the information provided can be amended in a way that would allow  you to approve the workflow, you may also <em>request a revision</em> rather than rejecting the workflow.</p>
+<h2 id="requesting-a-revision"><a class="header" href="#requesting-a-revision">Requesting a Revision</a></h2>
 <p>When you cannot approve the workflow, but you feel that the information submitted can be corrected, you can choose <strong>Request Revision</strong>.</p>
 <img style='width:600px' src='../images/workflow-revision-resubmit.png'/>
 <p>If you are the first approver, as is the case in the screenshot above, the workflow will return to the <em>submitter</em>.  If you are further down the approval chain, a request for revision will send the workflow back to whoever last approved it.  In both cases, the intended recipient will receive a <a href="./workflow-notifications.html">notification</a>, and your revision <strong>notes</strong> will be visible to that person.  If it is the last approver, they can elect to similarly pass the workflow <strong>back down the chain</strong>, all the way back to the submitter, but requesting another revision.</p>
@@ -171,16 +195,17 @@
 <p>Regardless of why, you can <em>always</em> pass off the workflow to someone else.  Just scroll down to the <strong>Pass to another person</strong> area of the workflow, select the person you are looking for, and click <strong>Handoff to Selected Person</strong>.</p>
 <img style='width:600px' src='../images/workflow-handoff.png'/>
 <p>There’s always an audit trail - so the handoff will be listed in the actions taken on this workflow.</p>
+<p><strong>Note</strong>:  Any appiversity <strong>User</strong> with the <strong>workflow</strong> account privilege can view any workflow, and can also initiate a <em>handoff</em> of any workflow. This features allows someone to go into another person’s workflow queue and hand off flows - perhaps because that person is out sick, and cannot do this themselves.  The audit trail ensure that this feature is used with full visibility - it will be clear <em>who</em> handed off a workflow, <em>to who</em>, and <em>when</em>.  Users with <strong>workflow</strong> privilege <strong>cannot</strong> approve/reject/revise workflows in someone else’s queue - but they can hand it off to someone else.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../workflow/workflow-queue.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../workflow/starting-workflow.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../workflow/workflow-archive.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../workflow/workflow-notifications.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -190,11 +215,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../workflow/workflow-queue.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../workflow/starting-workflow.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../workflow/workflow-archive.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../workflow/workflow-notifications.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

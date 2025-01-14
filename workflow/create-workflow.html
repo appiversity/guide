@@ -155,8 +155,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>This document is an user guide for getting started with Workflows.  We’ll walk you through creating new workflows, defining approval chains, using document attachments, and managing access.  <strong>Let’s get started!</strong></p>
-<h1 id="whats-a-workflow"><a class="header" href="#whats-a-workflow">What’s a <em>Workflow</em>?</a></h1>
+                        <h1 id="whats-a-workflow"><a class="header" href="#whats-a-workflow">What’s a <span style='color:OrangeRed'>Workflow</span>?</a></h1>
 <p>When we talk about a Workflow, we are referring to the entire process associated around a particular approval or workflow sequence.</p>
 <p>For example, <strong>Course Drop</strong> is a <strong>workflow</strong>.  It requires the <em>initiator</em> (presumably a student) to populate a form documenting which course they are dropping.  This information is then <em>approved</em> or rejected by a sequence of people - the instructor, the chair, the dean.  The information passed to the registrar for processing.  This entire process is a <strong>workflow</strong>, and each step is a <strong>workflow step</strong>.</p>
 <p>Whe we say “Create a workflow”, we mean <em>creating the entire process sequence</em>:</p>
@@ -165,14 +164,14 @@
 <li>Defining each approval step</li>
 <li>Defining what each approval step may add to the flow.  For example, attaching additional documentation or data.</li>
 </ol>
-<p><strong>Creating a workflow</strong> is different than someone <em>starting</em> a workflow - or <em>initiating a course drop</em>.  Think of <strong>creating a workflow</strong> as <strong>creating</strong> the form.  You do that once (or at least once in a while).</p>
+<p><strong>Creating a workflow</strong> is different than someone <em>starting</em> a workflow - or <em>initiating a course drop</em>.  Think of <strong>creating a workflow</strong> as <strong>creating</strong> the form.  You do that once (or at least once in a while).  Then people fill out copies of the form - which is like <em>starting a workflow</em> in appiversity.</p>
 <h2 id="who-can-create-a-workflow"><a class="header" href="#who-can-create-a-workflow">Who can create a workflow</a></h2>
-<p>Remember there are different <a href="./user-categories.html">categories of stakeholders</a> using appiversity at your institution.  You have <em>people</em>, who are staff members, faculty, employees.  You have students.  You have <em>public</em> people - who are not necessarily associated with the institution at all.  While these stakeholders might <em>start</em> or <em>initiate</em> a workflow, they aren’t the people who will be <strong>creating the workflow in the first place</strong>.</p>
+<p>Remember there are different <a href="../departments/people-public-people-users.html">categories of stakeholders</a> using appiversity at your institution.  You have <em>people</em>, who are staff members, faculty, employees.  You have students.  You have <em>public</em> people - who are not necessarily associated with the institution at all.  While these stakeholders might <em>start</em> or <em>initiate</em> a workflow, they aren’t the people who will be <strong>creating the workflow in the first place</strong>.</p>
 <p>Only appiversity <strong>users</strong> with the <strong>Workflows</strong> account privilege may create, edit, delete, and rollover workflows.  You can check a user’s profile (or your own) to see if if this privilege has been granted:</p>
 <img style='width:300px' src='../images/workflow-privy.png'/>
 <h1 id="creating-your-first-workflow"><a class="header" href="#creating-your-first-workflow">Creating your first Workflow</a></h1>
-<p>Workflows can be accessed from the institutional home page or the main toolbar.  The cog icon is a short cut to the management area of Workflows, which is where you will create new workflows from.
-<img style='width:300px' src='../images/workflow-config-from-home.png'/></p>
+<p>Workflows can be accessed from the institutional home page or the main toolbar.  The cog icon is a short cut to the management area of Workflows, which is where you will create new workflows from.</p>
+<img style='width:300px' src='../images/workflow-config-from-home.png'/>
 <img style='width:300px' src='../images/workflow-from-toolbar.png'/>
 <p>Once you arrive at the Workflows screen, you have three tabs at the top:</p>
 <ol>
@@ -185,11 +184,12 @@
 <h2 id="defining-workflow-data"><a class="header" href="#defining-workflow-data">Defining Workflow Data</a></h2>
 <p>Workflows consist of <em>workflow data</em>, which is information about the workflow process in general. This includes it’s name, a description, and access flags.</p>
 <h3 id="active--inactive"><a class="header" href="#active--inactive">Active / Inactive</a></h3>
-<p>Workflows can be set to <strong>active</strong> or <strong>inactive</strong>.  Active workflows can be started, while inactive workflows cannot.  Keeping a workflow <em>inactive</em> while it is a draft, or until you want to allow access is generally a good idea.  Once a workflow is started by someone, the workflow process itself cannot be deleted.</p>
-<p>Note that workflows can by <strong>rolled</strong> over from AY to AY.  You’ll notice that you are activating the new workflow for a given AY.  The workflow will rollover to future AYs (during the normal <a href="./rollover.html">rollover process</a>) with the same Active/Inactive state.</p>
+<p>Workflows can be set to <strong>active</strong> or <strong>inactive</strong>.  Active workflows can be started, while inactive workflows cannot.  Keeping a workflow <em>inactive</em> while it is a draft, or until you want to allow access is generally a good idea.  Once a workflow is started by someone, the workflow process itself cannot be deleted.  <strong>Workflows cannot be edited</strong>, so you will want to review them carefully before activating.</p>
+<p><span style="display: none">GUIDE WATCH OUT:  Editing workflows is on the roadmap, so this will need to be revisited.</span></p>
+<p>Note that workflows can by <strong>rolled</strong> over from AY to AY.  You’ll notice that you are activating the new workflow for a given AY.  The workflow will rollover to future AYs (during the normal <a href="../academic-years/rollover.html">rollover process</a>) with the same Active/Inactive state.</p>
 <h3 id="restricted-vs-public"><a class="header" href="#restricted-vs-public">Restricted vs Public</a></h3>
 <p>Workflows marked as <strong>public</strong> can be initiated by anyone. This setting makes sense when the workflow is something a student would start (an Add/Drop request for a course), or even workflows that might be initiated by completely external people (maybe an inquiry).  “Public” workflows still require the submitter/initiator to provide a verifiable email address, but they do not need to belong to the institution.</p>
-<p>Workflows marked as restricted can only be initiated by an appiversity user, they need to be logged in. This includes anyone with a full <strong>User</strong> account and anyone listed in <strong>People</strong> (ex. faculty, staff).  Restricted makes sense for workflows like a special payment form, or a grade change that can only be initiated by faculty.  Restricted workflows will never be listed in <a href="./publish.html">published</a> listings, they can only be started from within appiversity itself.</p>
+<p>Workflows marked as restricted can only be initiated by an appiversity user, they need to be logged in. This includes anyone with a full <strong>User</strong> account and anyone listed in <strong>People</strong> (ex. faculty, staff).  Restricted makes sense for workflows like a special payment form, or a grade change that can only be initiated by faculty.  Restricted workflows will never be listed in <a href="../publishing/">published</a> listings, they can only be started from within appiversity itself.</p>
 <p>Let’s start by creating an example for <strong>Course Drop</strong>.  We’ll give it a title and description, and mark it as <strong>active</strong> and <strong>public</strong>, since it may be initiated by a student.</p>
 <p><span style="display: none">GUIDE WATCH OUT:  Students will become users eventually, so this is an area where this guide might need to be updated.  Likewise, once Catalog and Schedule integration are complete, the UX here is going to be updated.</span></p>
 <p>Once you’ve filled out the necessary data, click <strong>Next</strong> to move on to <em>submission data</em>*.</p>
@@ -286,7 +286,7 @@ they are listed in on the submission building screen. You can use the up and dow
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../workflow/publishing-workflows.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../workflow/public-workflows.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -300,7 +300,7 @@ they are listed in on the submission building screen. You can use the up and dow
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../workflow/publishing-workflows.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../workflow/public-workflows.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

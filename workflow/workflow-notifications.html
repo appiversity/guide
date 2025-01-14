@@ -155,12 +155,37 @@
 
                 <div id="content" class="content">
                     <main>
-                        
+                        <h1 id="workflow-notifications"><a class="header" href="#workflow-notifications">Workflow Notifications</a></h1>
+<p>Throughout the lifecycle of a workflow, the appropriate people will receive notifications via their email address when the workflow passes through various stages.</p>
+<img src='../images/flow-lifecycle.png'/>
+<h2 id="on-submit"><a class="header" href="#on-submit">On Submit</a></h2>
+<p>Whenever a workflow is submitted (started), either fresh or because a revision was requested of the submitter, two email notifications are sent:</p>
+<ol>
+<li>To the <strong>Submitter</strong>:  This email confirms to the submitter that the workflow has been received.  The email contains the <em>permalink</em> for the workflow, which can be used at anytime to view the full status of the workflow.  It also includes information about who is currently reviewing the workflow.</li>
+<li>To the <strong>Approver</strong>:  This email is sent to the recipient selected by the submitter.  The email contains information regarding who submitted the form, and some basic header information.  The email explains that the recipient is the next person expected to take action on the workflow.  The permalink is also included in the email, which can be clicked to go directly to the workflow.</li>
+</ol>
+<h2 id="on-approval"><a class="header" href="#on-approval">On Approval</a></h2>
+<p>When someone <strong>approves</strong> a workflow, the notifications depend on the <em>next step</em>.</p>
+<h3 id="workflow-is-complete"><a class="header" href="#workflow-is-complete">Workflow is Complete</a></h3>
+<p>If there are no additional steps, then the <strong>submitter</strong> receives an email notifying them that their workflow has been approved and completed.  The email again contains the permalink for quick access to the details (if any) added to the workflow.</p>
+<h3 id="additional-approvals"><a class="header" href="#additional-approvals">Additional approvals</a></h3>
+<p>If there are additional steps in the approval chain, then on approval the reviewer must have selected a recipient for the <strong>next</strong> step.  An email is sent to this recipient.  The email contains information regarding who submitted the form, and some basic header information.  The email explains that the recipient is the next person expected to take action on the workflow.  The permalink is also included in the email, which can be clicked to go directly to the workflow.</p>
+<p><strong>Note</strong> the submitter is not notified when the workflow is being passed from one approval step to another.  The submitter may, at any time, access the workflow via the permalink provided in the original submission notification however.  This allows them to check the status of the workflow and see completed approvals, intermediate notes (if any), and the current status.</p>
+<h2 id="on-request-for-revision"><a class="header" href="#on-request-for-revision">On Request for Revision</a></h2>
+<p>Requests for revision follow the similar notification rules as approvals.  When a request for revision is made <strong>and the reviewer is the first reviewer</strong>, then the workflow is being returned to <strong>the submitter</strong>.  In this case, the <strong>submitter</strong> will receive a notification email.</p>
+<p>If the reviewer is requesting a revision, but there were prior approvals in the chain, then the workflow is being returned to the reviewer proceeding this step - and a notification email is sent to that reviewer.  That reviewer can request revision again, sending it back one more step - and so on.</p>
+<p>For example, if a student submits a course drop request to an instructor, who approves the request and sends it to the dean, the dean may request a revision asking for more information.  This request for revision goes back to the instructor.  If the instructor is able to provide that information, it can be added and re-approved, sending it back to the dean.  If the instructor is unable to provide the information, they can request revision once more, and the workflow is returned to the student.</p>
+<h2 id="on-rejection"><a class="header" href="#on-rejection">On Rejection</a></h2>
+<p>When a workflow is rejected, it’s lifecycle has terminated.  Only the <strong>submitter</strong> is notified.  The email contains the reason for rejection as entered by the reviewer, and the permalink for additional details.</p>
+<h2 id="on-hand-off"><a class="header" href="#on-hand-off">On Hand-Off</a></h2>
+<p>Whenever someone <em>hands off</em> a workflow, the new recipient is notified via email, with all of the same information they would  have received if they were the original recipient.  The submitter, and other approvers associated with the workflow are <em>not</em> notified.</p>
+<p><span style="display: none">GUIDE WATCH OUT:  Roadmap has automatic handoff, along with email silencing to support people who receive many workflows.  Will need to update guide to reflect this.</span></p>
+
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../workflow/starting-workflow.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../workflow/approving-workflow.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -174,7 +199,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../workflow/starting-workflow.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../workflow/approving-workflow.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 

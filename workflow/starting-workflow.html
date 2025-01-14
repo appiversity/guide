@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Starting Workflows - appiversity user guide</title>
+        <title>Submitting Workflows - appiversity user guide</title>
 
 
         <!-- Custom HTML head -->
@@ -164,10 +164,10 @@
 <p>After clicking begin, a new <strong>workflow instance</strong> will be created and you will be redirected to begin submitting it.  A few details to note:</p>
 <ul>
 <li>The link at the top of your browser will appear differently.  For example, the URL for the screenshot below is http://appiversity.com/flow/fc71721e-6cea-475e-b219-ad2ff34dd1d6.  (Don’t try it, it’s not active anymore :).  This is a <em>permalink</em> to the specific instance of your workflow that you are filling out.</li>
-<li>The interface we’ll walk though now will look the same whether you are logged into appiversity with a <strong>People</strong> account (you are faculty, staff, etc), a students, or a non-affiliated <em>public person</em>.  You’ll get to this screen differently if you are a student or a non-affiliated person, and that’s described <a href="./public-workflows.html">here</a>.</li>
+<li>The interface we’ll walk though now will look the same whether you are logged into appiversity with a <strong>People</strong> account (you are faculty, staff, etc), , or a non-affiliated <em>public person</em>.  You’ll get to this screen differently if you are a student or a non-affiliated person, and that’s described <a href="./public-workflows.html">here</a>.</li>
 </ul>
 <img style='width:600px' src='../images/workflow-starting.png'/>
-<p>Take note that the front matter of the workflow always displays the <strong>submitter</strong>, along with the timestamp the workflow was started.  This is displayed on the top left.  The workflow <strong>status</strong> is also always displayed, at the top-right.  When you begin, the workflow is in the <em>pre-subimt</em> stage.</p>
+<p>Take note that the front matter of the workflow always displays the <strong>submitter</strong>, along with the timestamp the workflow was started.  This is displayed on the top left.  The workflow <strong>status</strong> is also always displayed, at the top-right.  When you begin, the workflow is in the <em>pre-submit</em> stage.</p>
 <h2 id="workflow-stages"><a class="header" href="#workflow-stages">Workflow Stages</a></h2>
 <p>A workflow goes through a lifecycle of stages.</p>
 <ul>
@@ -184,7 +184,7 @@
 <p>All workflows are archived, and can be searched by any appiversity <strong>user</strong>.  Submitters can find their own workflows through the archive, and approvers can do the same.  The only workflows that are <em>not</em> archived are flows that are cancelled before any approver acts on the workflow.</p>
 <p><a href="./workflow-notifications.html">Notifications</a> are triggered on every state change, and every time a workflow is moved into another person’s queue.</p>
 <h2 id="submission-data"><a class="header" href="#submission-data">Submission Data</a></h2>
-<p>Before moving forward, the user will be required to enter all required submission fields, which were defined when the workflow was created.  All of the input fields are found under the “Start Here” section.</p>
+<p>Before moving forward, the user will be required to enter all required submission fields, which were defined when the <a href="./create-workflow.html">workflow was created</a>.  All of the input fields are found under the “Start Here” section.</p>
 <img src='../images/flow-submit-fields.png'/>
 <h2 id="uploading-submission-documents"><a class="header" href="#uploading-submission-documents">Uploading submission documents</a></h2>
 <p>If the workflow has defined documents for submission, these will be displayed in the submission area.  Required documents block submission until they are uploaded.</p>
@@ -193,8 +193,16 @@
 <img style='width:600px' src='../images/workflow-submit-file-download-upload.png'/>
 <p>In this case, the “Course Prerequisite Form.pdf” document presumably is your institution’s fillable PDF for instructors to request a course prerequisite to be changed in the catalog.  The <strong>submitter</strong> would download it, by clicking the link.  The submitter then fills out the form, and <strong>uploads it</strong> as part of the submission.  This allows you to quickly leverage existing forms within Workflows.</p>
 <h1 id="submitting-the-workflow"><a class="header" href="#submitting-the-workflow">Submitting the Workflow</a></h1>
+<p>When submitting a workflow, a <em>recipient</em> must be selected.  While <a href="./create-workflow.html">creating the workflow</a> the first approval step may  have been created with pre-selection criteria - a role, position, or actual person.  In addition, the instructions associated with the workflow should also provide guidance to the person submitting the workflow as to who should receive it.  This is the same concept you are used to with sending electronic PDF forms or paper forms - the person filling out the form must in some way make a decision in terms of who to send it to!</p>
+<p>The instructions for recipient selection will be shown above the search field for selecting a recipient.  The user can use the search box to find the appropriate person, check their name, and click <strong>Submit Workflow</strong>.</p>
+<img style='width:600px' src='../images/workflow-submit-recip-select.png'/>
+<p>Below the submit button the user is also given additional context, where they can see what <em>other</em> approval steps will be taken on this workflow.  This helps the submitter understand what will happen to their request after they submit, and adds transparency to the process.  They also have the option to <em>cancel</em> the workflow and not submit it.</p>
+<img style='width:600px' src='../images/workflow-submit-info.png'/>
 <h1 id="next-steps"><a class="header" href="#next-steps">Next steps</a></h1>
-<p>When you are the submitter of a workflow, you’ll have full visibility into who is taking what actions on it from that point on.  Check out the following guide topics to learn more:</p>
+<p>When you are the submitter of a workflow, you’ll have full visibility into who is taking what actions on it from that point on.  The submitter will receive an email after submission that contains the permalink to their workflow.  At any time, they can use that link, or they can find their workflow in the <strong>My Workflow Queue</strong> to check it’s status.  Navigating to the workflow, they will see the workflow status as <em>pending</em> and be able to see who is currently reviewing the workflow.</p>
+<img style='width:600px' src='../images/workflow-submitted-pending.png'/>
+<img style='width:600px' src='../images/workflow-submitted-current-person.png'/>
+<p>Check out the following guide topics to learn more:</p>
 <ul>
 <li><a href="./workflow-queue.html">Workflow Queue</a></li>
 <li><a href="./workflow-notifications.html">Workflow Notifications</a></li>
@@ -208,7 +216,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../workflow/workflow-notifications.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../workflow/approving-workflow.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -222,7 +230,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../workflow/workflow-notifications.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../workflow/approving-workflow.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
