@@ -42,6 +42,7 @@
     - [Demand Management]()
 - [Registration]()
     - [Wait lists]()
+    - [Overides]()
 - [Records & Audits]()
     - [Transcripts]()
     - [Audits / What-if]()
