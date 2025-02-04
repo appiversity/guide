@@ -54,7 +54,7 @@
     - [Importing data](./publishing/importing.md)
     - [Exporting your data](./publishing/exporting.md)
     - [Embedding with `iframes`](./publishing/embedding.md)
-- [Account Management](./accounts/index.md)
+[Account Management](./accounts/index.md)
     - [Upgrading](./accounts/upgrading.md)
     - [Representative of Record](./accounts/ror.md)
     - [Data Privacy](./account/data-privacy.md)
