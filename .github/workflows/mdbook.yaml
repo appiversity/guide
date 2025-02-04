@@ -9,10 +9,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: ubuntu:24.04
-    env:
-      ARCH: x64
-      TARGET: linux
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
