@@ -156,6 +156,19 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="public-account-sign-in"><a class="header" href="#public-account-sign-in">Public account sign in</a></h1>
+<p>In some cases, you will allow <em>public</em> people to interact with your institution.  The most common example - a <em>public workflow</em>.  In this case, the person accessing the workflow needs to be able to submit the workflow, and it’s important we only allow identifiable people to do this to prevent abuse.</p>
+<h2 id="email-address"><a class="header" href="#email-address">Email address</a></h2>
+<p>When someone requests access to something on appiversity, and they are not logged in, they will always be asked for an email address.  The person will be asked to use their <code>.edu</code> address IF they have one, but also that it is not required.</p>
+<p>When they enter their email address, we route them through three possible paths:</p>
+<ol>
+<li>If their email address is associated with an account, or a record in your People listings, then we just route them to the standard <a href="./index.html">sign in</a> user flow.</li>
+<li>If their email address is new to us, we start them down the flow of creating a new “Public Person” profile.  See below.</li>
+<li>If their email address is <em>already</em> associated with a public person profile, then they are emailed an <a href="./otl.html">OTL</a> and can sign on accordingly.</li>
+</ol>
+<h2 id="creating-a-public-person-profile"><a class="header" href="#creating-a-public-person-profile">Creating a Public Person profile</a></h2>
+<p>New people access your institution will be asked to provide their name and phone number.  We will <em>not</em> contact this person for any reason other than to help them authenticate using <a href="./otl.html">OTL</a>.  You will have access to the information they provide however.</p>
+<p><img src="../images/publicprofile.png" alt="public" /></p>
+<p>Once they’ve registered, they can login using an OTL.  Note, this requires the person to have access to the email address inbox they claim to be using - which helps prevent a lot of problems for you, and us.  We can  also block abuse at the email level if a particular person continues to access appiversity in away that either you, or we, determine to be problematic.</p>
 
                     </main>
 

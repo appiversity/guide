@@ -155,7 +155,72 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="exporting-your-data"><a class="header" href="#exporting-your-data">Exporting your data</a></h1>
+                        <h1 id="exporting-data-csv-json-and-excel-formats"><a class="header" href="#exporting-data-csv-json-and-excel-formats">Exporting Data: CSV, JSON, and Excel Formats</a></h1>
+<p>appiversity allows you to easily export various types of data, such as courses, degrees, programs, attributes, people, departments, roles, and workflows. On any listing page, you’ll see export buttons at the bottom of the list, which give you the option to export data in three formats: <strong>CSV</strong>, <strong>JSON</strong>, and <strong>Excel</strong>.</p>
+<p><img src="../images/export.png" alt="export" /></p>
+<h3 id="what-are-csv-json-and-excel-formats"><a class="header" href="#what-are-csv-json-and-excel-formats">What Are CSV, JSON, and Excel Formats?</a></h3>
+<ol>
+<li>
+<p><strong>CSV (Comma-Separated Values)</strong></p>
+<ul>
+<li><strong>Definition</strong>: CSV is a plain text format where each row of data is represented by a line, and the fields within each row are separated by commas. It is a simple format that works well for tabular data.</li>
+<li><strong>Use</strong>: CSV is useful when you want to quickly view or analyze data in a basic table format. It can be easily imported into spreadsheet tools (e.g., Microsoft Excel or Google Sheets) or used by databases for quick processing.</li>
+</ul>
+</li>
+<li>
+<p><strong>JSON (JavaScript Object Notation)</strong></p>
+<ul>
+<li><strong>Definition</strong>: JSON is a text-based format that stores data as key-value pairs. It is more flexible than CSV, supporting hierarchical or nested structures, which makes it ideal for more complex data.</li>
+<li><strong>Use</strong>: JSON is appropriate when you need to export more detailed or structured data that includes relationships or nested information. It is widely used for data interchange between systems and is easy to work with for developers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Excel (XLSX)</strong></p>
+<ul>
+<li><strong>Definition</strong>: Excel is a spreadsheet format that supports more advanced features than CSV, such as data formatting, formulas, charts, and more. It is commonly used for data analysis and presentation.</li>
+<li><strong>Use</strong>: Excel is helpful when you need to work with data in a more structured, visual, or analytical way. It provides a rich interface for managing and manipulating large datasets and can be used for creating reports or performing calculations directly in the file.</li>
+</ul>
+</li>
+</ol>
+<h3 id="full-export-with-json"><a class="header" href="#full-export-with-json">Full Export with JSON</a></h3>
+<p>Among the three formats, <strong>JSON</strong> offers the most complete export of your data. It captures a wider range of attributes and supports complex data structures, including nested or related data that can’t be represented in a simple table like CSV. If you need the most detailed export, JSON will provide a fuller picture of the data, including all the attributes associated with the records.</p>
+<h3 id="export-access"><a class="header" href="#export-access">Export Access</a></h3>
+<p>The ability to export data depends on the type of account you have:</p>
+<ul>
+<li>
+<p><strong>Kickstart Account</strong>: With a Kickstart account, you can export data related to departments, people, and roles. These exports cover core organizational data but do not include full catalog data.</p>
+</li>
+<li>
+<p><strong>Catalog Package</strong>: If you need to export catalog-related data, such as courses, degrees, programs, or attributes, you must have access to the <strong>Catalog Package</strong>. This package enables full access to the catalog data and all associated exports.</p>
+</li>
+</ul>
+<h3 id="integration-with-external-systems"><a class="header" href="#integration-with-external-systems">Integration with External Systems</a></h3>
+<p>When exporting data for integration with other systems, the format you choose depends on the nature of the integration:</p>
+<ol>
+<li>
+<p><strong>JSON for Integrations You Control</strong></p>
+<ul>
+<li><strong>Best for</strong>: If you’re integrating with an application or system where you have control over the implementation (such as a custom backend or internal tool), <strong>JSON</strong> is the preferred format. Its structured nature makes it easy for developers to parse and use the data in a programmatic way. JSON can handle complex, hierarchical relationships, making it a powerful choice for integration when you need to transfer detailed data.</li>
+<li><strong>Example</strong>: If you’re pushing data from our system into an API that your team has developed, JSON allows you to map the data easily, ensuring it matches the structure required by the receiving system.</li>
+</ul>
+</li>
+<li>
+<p><strong>CSV for Third-Party Applications</strong></p>
+<ul>
+<li><strong>Best for</strong>: For many third-party applications, particularly those that don’t have a custom integration setup, <strong>CSV</strong> is the most widely supported format. Most systems, from data analysis tools to CRM software, are designed to work seamlessly with CSV files, allowing for easy import and export.</li>
+<li><strong>Example</strong>: If you’re sending data from our system to a tool like Google Analytics or a marketing automation platform, CSV is often the easiest format for these platforms to process without requiring additional configuration.</li>
+</ul>
+</li>
+<li>
+<p><strong>Excel for Sharing with People</strong></p>
+<ul>
+<li><strong>Best for</strong>: When you need to send data to people outside your organization or to others who don’t have direct access to the platform (such as stakeholders, collaborators, or departments), <strong>Excel</strong> is often the best format. It allows you to include additional formatting, provide data insights with built-in charts, and even make use of formulas for quick calculations. Excel is also more user-friendly for non-technical users.</li>
+<li><strong>Example</strong>: If you’re sharing a list of courses or departmental data with someone who needs to view the information and maybe make edits or calculations, Excel provides an intuitive, familiar format.</li>
+</ul>
+</li>
+</ol>
+<h3 id="summary"><a class="header" href="#summary">Summary</a></h3>
+<p>The ability to export data in <strong>CSV</strong>, <strong>JSON</strong>, and <strong>Excel</strong> formats offers flexibility depending on your needs. Whether you’re working on internal integrations with your own applications, exporting data to third-party systems, or sharing information with others, the system provides the necessary tools to ensure smooth data exchange. JSON is ideal for structured integrations, CSV is best for broad compatibility, and Excel works well for collaborating and sharing data with those outside the system.</p>
 
                     </main>
 

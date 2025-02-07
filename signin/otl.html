@@ -156,6 +156,32 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="logging-in-with-a-otl--token"><a class="header" href="#logging-in-with-a-otl--token">Logging in with a OTL / Token</a></h1>
+<p>For non-KE users (faculty, staff, students), you will be presented with a screen asking for your “one time login code”.  This code will have been <em>emailed to you</em>.  If you don’t receive it after a few minutes, please check you entered your email address in correctly, and also check your spam folders.</p>
+<p><img src="../images/otl-prompt.png" alt="otl" /></p>
+<p>The email that your receive contains two things, either of which will get you signed in:</p>
+<p><img src="../images/otl-email.png" alt="otl-email" /></p>
+<p>The <strong>link</strong> (Click here to sign in) will take you right to appiversity, logged in - you’ll land on your dashboard.  Once clicked, the link is no longer valid.  The link is valid for 10 minutes from the time it was generated otherwise.</p>
+<p>If you don’t want to click the link, and you are still on the OTL prompt in your web browser, you can also enter the <em>code</em> itself - <code>D4FAF3FD</code> in the screenshot above in the prompt.</p>
+<h2 id="otl-and-security"><a class="header" href="#otl-and-security">OTL and Security</a></h2>
+<p><strong>appiversity</strong> employs <strong>GUID (Globally Unique Identifier)</strong> and <strong>OTL (One-Time Link)</strong> mechanisms to enhance authentication security while ensuring a seamless user experience. These methods are designed to provide strong security against unauthorized access, phishing attacks, and credential-based threats.</p>
+<h3 id="guid-based-authentication-security"><a class="header" href="#guid-based-authentication-security">GUID-Based Authentication Security</a></h3>
+<p>A GUID (Globally Unique Identifier) is a 128-bit randomly generated identifier that is unique across all systems. In the context of authentication, GUIDs serve as secure, non-guessable tokens used to identify a user session or authentication request.</p>
+<h3 id="why-guids-enhance-security"><a class="header" href="#why-guids-enhance-security">Why GUIDs Enhance Security</a></h3>
+<ul>
+<li><strong>Uniqueness</strong>: Each GUID is statistically unique, making it virtually impossible for attackers to guess or predict valid authentication tokens.</li>
+<li><strong>Randomness</strong>: The randomness of GUIDs prevents enumeration attacks, where an attacker might attempt to cycle through predictable user IDs or session tokens.</li>
+<li><strong>No Direct Association</strong>: Unlike usernames or email addresses, GUIDs do not directly expose identifiable user information, reducing the risk of credential leaks.</li>
+<li><strong>Short-Lived Usage</strong>: GUIDs used for authentication short and defined period, mitigating the risk of replay attacks.</li>
+</ul>
+<h3 id="otl-one-time-link-security"><a class="header" href="#otl-one-time-link-security">OTL (One-Time Link) Security</a></h3>
+<p><strong>OTL (One-Time Link)</strong> authentication is a method where users receive a unique, temporary link via email or another secure channel to log in without needing a password.  That link contains the required GUID described above, and is exactly what appiversity uses for allowing most users to login.</p>
+<h3 id="security-benefits-of-otl-authentication"><a class="header" href="#security-benefits-of-otl-authentication">Security Benefits of OTL Authentication:</a></h3>
+<ul>
+<li><strong>No Static Credentials</strong>: Since there are no permanent passwords, attackers cannot steal or reuse credentials through phishing or database leaks.</li>
+<li><strong>Expiration Control</strong>: One-time links are valid for a short duration, reducing the risk of unauthorized use if intercepted.</li>
+<li><strong>Single-Use Nature</strong>: Each OTL is valid for only one login attempt, preventing replay attacks.</li>
+<li><strong>Limited Exposure</strong>: Since OTLs are sent via a controlled channel (e.g., email), an attacker would need access to that channel to exploit them.</li>
+</ul>
 
                     </main>
 

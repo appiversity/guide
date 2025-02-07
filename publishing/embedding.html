@@ -156,6 +156,44 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="embedding-with-iframes"><a class="header" href="#embedding-with-iframes">Embedding with iframes</a></h1>
+<p><strong>appiversity</strong> provides a powerful way to share and display your institution’s data on your public website. With the ability to configure how data listings—such as course listings, program listings, departments, people, and workflows—are exposed to the public, <strong>appiversity</strong> makes it easy for you to showcase key information while maintaining control over what is made publicly accessible.</p>
+<h3 id="embedding-listings-on-your-institutions-website"><a class="header" href="#embedding-listings-on-your-institutions-website">Embedding Listings on Your Institution’s Website</a></h3>
+<p>One of the key features <strong>appiversity</strong> offers is the ability to create snippets that can be embedded into your institution’s website. These snippets allow you to display live data—such as courses, programs, departments, or workflows—directly on your site, making it easy for prospective students, faculty, and the public to access important information.</p>
+<p>We accomplish this through <strong>iframes</strong>, a widely-used HTML element that allows you to embed another document within the current page. Using <strong>iframes</strong>, you can display appiversity data directly on your website, without requiring your web pages to be modified every time the data is updated. When the data within <strong>appiversity</strong> is changed or updated, the embedded iframe automatically reflects these changes on your institution’s site.</p>
+<h3 id="setting-up-publishing"><a class="header" href="#setting-up-publishing">Setting up Publishing</a></h3>
+<p>From the dashboard, you can access Publishing - which is where all of the publication settings are controlled.</p>
+<p><img src="../images/publish.png" alt="pub" /></p>
+<p>Here you can change global preferences that effect all public-facing data.  This includes display preferences - like fonts and colors, along with labels (for example, if your institution calls academic departments “units”, you can specify that here).  This page also includes configuration of where you will end up publishing listings.  These settings help you integrate appiversity with your own institution’s web site.</p>
+<p><img src="../images/embed-creator.png" alt="pub" /></p>
+<p>The <code>iframe</code> Embed creator area allows you to interactively build <code>iframe</code> components containing department, people, position, workflow, and catalog listings.  These components can be configured to include search boxes (to allow people viewing the content to search listings), filters (to include only partial listings), and display property specifications (which properties about which records you show to public users).  All the configuration is done interactively, and you can take the <code>iframe</code> code snippet at add it anywhere on your institution’s web page to embed <em>live</em> appiversity data.</p>
+<h3 id="working-with-iframes"><a class="header" href="#working-with-iframes">Working with Iframes</a></h3>
+<p>An <strong>iframe</strong> (inline frame) is an HTML element used to embed one HTML document within another. For example, instead of linking to a separate page or document, an iframe lets you display the external content directly within your web page. In the context of <strong>appiversity</strong>, we use iframes to embed live data listings like course catalogs or departmental listings.</p>
+<h4 id="benefits-of-using-iframes"><a class="header" href="#benefits-of-using-iframes">Benefits of Using Iframes:</a></h4>
+<ul>
+<li><strong>Easy embedding</strong>: Iframes allow you to quickly add data to your website without needing to redesign or overhaul your site’s structure.</li>
+<li><strong>Live updates</strong>: When you update data in <strong>appiversity</strong>, the iframe automatically reflects those changes on your site, ensuring your listings are always up-to-date.</li>
+<li><strong>Separation of concerns</strong>: Iframes provide a way to separate the presentation of external data from the core content of your web page, making it easier to manage.</li>
+</ul>
+<h4 id="technical-considerations"><a class="header" href="#technical-considerations">Technical Considerations:</a></h4>
+<p>While iframes are generally easy to use, there are a few technical considerations you and your IT team will need to be aware of to ensure everything works smoothly:</p>
+<ol>
+<li>
+<p><strong>Cross-Domain Issues</strong>: Iframes often encounter restrictions when embedding content from a different domain (cross-origin requests). To overcome this, we will work with your IT team to ensure the necessary <strong>CORS (Cross-Origin Resource Sharing)</strong> headers are configured on your web server, allowing the iframe content to be displayed properly.</p>
+</li>
+<li>
+<p><strong>Responsive Design</strong>: If your website is responsive (i.e., it adjusts based on the device’s screen size), you may need to adjust the iframe’s dimensions or use responsive iframe embedding techniques to ensure it looks good on all devices (desktops, tablets, mobile phones). Our team can help with this setup to make sure the embedded data appears correctly across various screen sizes.</p>
+</li>
+<li>
+<p><strong>Security Considerations</strong>: Iframes introduce some security concerns, particularly with embedding third-party content. We will ensure that the iframe content served from <strong>appiversity</strong> is secure and follows best practices, such as using HTTPS, to avoid issues related to mixed content warnings in modern browsers.</p>
+</li>
+<li>
+<p><strong>SEO and Accessibility</strong>: Since iframes are embedded content, they don’t contribute directly to your website’s SEO ranking. However, with proper usage, you can ensure that embedded data is still accessible to search engines and users. If necessary, we can work with your web development team to optimize iframe content for accessibility and search engine indexing.</p>
+</li>
+</ol>
+<h4 id="collaborating-with-your-it-team"><a class="header" href="#collaborating-with-your-it-team">Collaborating with Your IT Team</a></h4>
+<p>We understand that integrating iframes into your website may require some coordination with your IT department. Our team is available to support you through the process, ensuring the embedding process works smoothly with your institution’s web architecture. From configuring CORS headers to troubleshooting potential conflicts, we’re here to help your IT team make the necessary adjustments for a successful iframe implementation.</p>
+<h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
+<p>With <strong>appiversity</strong>, you can easily configure how your institution’s data is exposed to the public, allowing you to share dynamic, up-to-date information via embedded iframes. This integration enables seamless sharing of course listings, programs, departments, and workflows on your institution’s website, with minimal effort required to keep everything current. If you need assistance with the technical setup, our team will work closely with your IT department to ensure smooth integration and address any technical challenges.</p>
 
                     </main>
 
@@ -165,7 +203,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../accounts/upgrading.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../accounts/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -179,7 +217,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../accounts/upgrading.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../accounts/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
