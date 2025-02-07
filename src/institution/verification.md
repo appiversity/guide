@@ -28,12 +28,12 @@ We will reach out to the contact you've provided.  Once we've been able to verif
 ## What happens if someone creates an "unauthorized" account?
 It's possible an employee, alumni, or even a student can create an account with us.  All they need is a valid email address under your email domain.  **That might sounds a little scary**, but it's not as bad as it sounds.
 
-An unverified account can create department listings, faculty listings, workflows, and build catalog data - but that data can't be access by anyone without logging into appiversity, under the very same insitutional account.
+An unverified account can create department listings, faculty listings, workflows, and build catalog data - but that data can't be access by anyone without logging into appiversity, under the very same institutional account.
 
 **Unverified accounts** have a strict (and low) limit of users.  Combined with the inability to publish anything, an unverified account is really just a *private* sandbox.
 
 When you sign up for an account, if someone from the same email domain (your institution) has already created an **unverified** account, you'll be notified - but you will be able to create *your own* **unverified account** too.
 
-Once an account for an institution **is verified**, then no additonal accounts can be created.  In addition, any additonal **unverified** accounts under the same insitution are disabled.
+Once an account for an institution **is verified**, then no additional accounts can be created.  In addition, any additional **unverified** accounts under the same institution are disabled.
 
 All told, the verification process protects your institution, and also allows you to get started quickly.  Don't hesitate to verify, it's quick and painless!
