@@ -895,15 +895,168 @@ they are listed in on the submission building screen. You can use the up and dow
 <p>For accounts that are using Registration and Records, students have limited accounts, and can access their own workflow queue through appiversity.  Otherwise, students utilize the public workflow list as described above.</p>
 </div>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="catalog"><a class="header" href="#catalog">Catalog</a></h1>
+<p>The appiversity Catalog module is a powerful tool designed to help institutions manage and publish their academic offerings. It allows you to model full academic degrees, programs (such as majors, minors, and general education sequences), courses, and their associated requirements. With an intuitive interface, the catalog is fully searchable, easy to navigate, and simple to publish, ensuring that students, faculty, and administrators can access up-to-date academic information effortlessly.</p>
+<h2 id="comprehensive-curriculum-modeling"><a class="header" href="#comprehensive-curriculum-modeling">Comprehensive Curriculum Modeling</a></h2>
+<p>The catalog enables institutions to model every aspect of their curriculum, including:</p>
+<ul>
+<li><strong><a href="catalog/./degrees-programs.html">Degree Programs</a>:</strong> Define complete academic programs with clear requirements.</li>
+<li><strong><a href="catalog/./courses.html">Courses and Requirements</a>:</strong> Specify individual courses, their prerequisites, and co-requisites.</li>
+<li><strong><a href="catalog/./course-attributes.html">Course Attributes</a>:</strong> Assign attributes such as “Lab,” “Writing Intensive,” or “Capstone.”</li>
+<li><strong><a href="catalog/./attainments.html">Other Attainments</a>:</strong> Track standardized test scores, placement scores, career service seminar attendance, or any other non-course requirement.</li>
+</ul>
+<h3 id="seamless-navigation-and-search"><a class="header" href="#seamless-navigation-and-search">Seamless Navigation and Search</a></h3>
+<p>TheCatalog is designed with usability in mind. Users can:</p>
+<ul>
+<li>Quickly search for courses, programs, and requirements.</li>
+<li>Easily browse through categories and attributes.</li>
+<li>View detailed requirement structures without digging through complex documents.</li>
+</ul>
+<h3 id="easy-publishing-and-updates"><a class="header" href="#easy-publishing-and-updates">Easy Publishing and Updates</a></h3>
+<p>Academic institutions frequently update courses, and the Catalog makes it simple to keep information current. Faculty and administrators can make changes without needing extensive technical knowledge, ensuring that students always have access to the most up-to-date program and course requirements.</p>
+<h2 id="defining-requirements-with-reqit"><a class="header" href="#defining-requirements-with-reqit">Defining Requirements with Reqit</a></h2>
+<p>One of the most powerful features of the Catalog is <a href="catalog/../reqit/index.html">Reqit</a>, a specialized language for defining academic requirements. Instead of manually specifying each individual course in a program or prerequisite structure, Reqit allows for high-level, flexible rule definitions.</p>
+<h3 id="the-benefits-of-reqit"><a class="header" href="#the-benefits-of-reqit">The Benefits of Reqit</a></h3>
+<ul>
+<li><strong>Dynamic Updates:</strong> Requirements do not need to be edited every time a new course is added or removed.</li>
+<li><strong>Simplified Rule Creation:</strong> Instead of listing every possible course manually, you can define broad conditions like “any 200-level Math course” or “at least two Data Science electives.”</li>
+<li><strong>Clear Structure:</strong> Reqit ensures that requirements are unambiguous and machine-readable, making it easier for students and advisors to interpret program requirements.</li>
+</ul>
+<p>By leveraging Reqit within the appiversity Catalog, institutions can streamline curriculum management, improve clarity in academic advising, and maintain flexibility in program structures over time.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="degrees-and-programs"><a class="header" href="#degrees-and-programs">Degrees and Programs</a></h1>
+<p>Degrees are full academic degrees, granted by the institution. They are recognized outside of the institution - as Bachelor of Science Degrees, for example. They may be composed of academic program (completion), like a major. They can also have additional requirements, such as residency, overall GPA, minimum number of credits, and other institutional achievements.</p>
+<p>Academic programs are majors, minors, concentrations, tracks, and other collections of requirements associated with an academic plan of study. The are not degrees, rather they make up part of a degree. Degrees have additional requirements, such as residency, total credits, etc.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="courses"><a class="header" href="#courses">Courses</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="attainments"><a class="header" href="#attainments">Attainments</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="course-attributes"><a class="header" href="#course-attributes">Course Attributes</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="reqit"><a class="header" href="#reqit">Reqit</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introduction-to-reqit"><a class="header" href="#introduction-to-reqit">Introduction to Reqit</a></h1>
+<p>Reqit is a simple way to describe course and program requirements in the appiversity Catalog. This guide will help you understand how to use Reqit to express prerequisites and other conditions in an easy-to-follow format.</p>
+<h2 id="1-understanding-basic-reqit-expressions"><a class="header" href="#1-understanding-basic-reqit-expressions">1. Understanding Basic Reqit Expressions</a></h2>
+<p>Reqit statements describe what courses or programs a student needs to take before enrolling in another course or completing a program. These statements use simple rules and keywords to express conditions.</p>
+<h3 id="11-basic-operators"><a class="header" href="#11-basic-operators">1.1 Basic Operators</a></h3>
+<p>Reqit expressions rely on a few key symbols:</p>
+<ul>
+<li><strong>=</strong> means “is equal to”</li>
+<li><strong>&lt;, &gt;, &lt;=, &gt;=</strong> mean “less than” or “greater than”</li>
+<li><strong>AND</strong> means “both conditions must be met”</li>
+<li><strong>OR</strong> means “at least one condition must be met”</li>
+<li><strong>ANY</strong> means “one or more from a list must be met”</li>
+<li><strong>ALL</strong> means “every condition in the set must be met”</li>
+</ul>
+<h3 id="12-course-and-program-attributes"><a class="header" href="#12-course-and-program-attributes">1.2 Course and Program Attributes</a></h3>
+<p>Courses and programs can be specified in different ways:</p>
+<ul>
+<li><strong>By Subject and Number:</strong> <code>Course=CMPS.147</code> means “Computer Science 147”</li>
+<li><strong>By Subject Only:</strong> <code>Course.Subject=MATH</code> means “any Math course”</li>
+<li><strong>By Credits:</strong> <code>Course.Credits&gt;=3</code> means “any course worth at least 3 credits”</li>
+<li><strong>By Minimum Grade:</strong> <code>Course=CMPS.231[mg=75]</code> means “CMPS 231 with a minimum grade of 75”</li>
+<li><strong>By Standardized Test Score:</strong> <code>Test=SAT.Math[score&gt;=650]</code> means “a Math SAT score of at least 650”</li>
+<li><strong>By Program Completion:</strong> <code>Program=CybersecurityBS</code> means “completion of the Cybersecurity Bachelor’s program”</li>
+</ul>
+<h2 id="2-writing-course-and-program-prerequisites"><a class="header" href="#2-writing-course-and-program-prerequisites">2. Writing Course and Program Prerequisites</a></h2>
+<p>Let’s look at how prerequisites are written in Reqit.</p>
+<h3 id="21-simple-prerequisites"><a class="header" href="#21-simple-prerequisites">2.1 Simple Prerequisites</a></h3>
+<ul>
+<li>
+<p><strong>CMPS 147 - Computer Science 1</strong>: Requires a MATH course numbered between 100 and 200</p>
+<ul>
+<li><code>Reqit: OR(AND(Course.Subject=MATH Course.Number&lt;200 Course.Number&gt;=100))</code></li>
+</ul>
+</li>
+<li>
+<p><strong>CMPS 148 - Computer Science 2</strong>: Requires CMPS 147 with a minimum grade of 70</p>
+<ul>
+<li><code>Reqit: Course=CMPS.147[mg=70]</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="22-multiple-course-requirements"><a class="header" href="#22-multiple-course-requirements">2.2 Multiple Course Requirements</a></h3>
+<ul>
+<li><strong>CMPS 311 - Operating Systems</strong>: Requires three specific courses (CRWT 102, CMPS 220, and CMPS 231) and either MATH 205 or MATH 237
+<ul>
+<li><code>Reqit: AND(ALL(SET(Course=CMPS.220 Course=CMPS.231 Course=CRWT.102)) ANY(SET(Course=MATH.205 Course=MATH.237)))</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="23-choosing-from-multiple-options"><a class="header" href="#23-choosing-from-multiple-options">2.3 Choosing from Multiple Options</a></h3>
+<ul>
+<li>
+<p><strong>CMPS 240 - Data Analytics in Python</strong>: Requires either CMPS 148 with a minimum grade of 70, or CMPS 130</p>
+<ul>
+<li><code>Reqit: OR(Course=CMPS.148[mg=70] Course=CMPS.130)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>CMPS 305 - Cyber Security</strong>: Requires either CMPS 231 or CMPS 240</p>
+<ul>
+<li><code>Reqit: OR(Course=CMPS.231 Course=CMPS.240)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="24-complex-requirements"><a class="header" href="#24-complex-requirements">2.4 Complex Requirements</a></h3>
+<ul>
+<li>
+<p><strong>CMPS 331 - Artificial Intelligence</strong>: Requires either CMPS 231 or CMPS 240, plus either MATH 205 or MATH 237</p>
+<ul>
+<li><code>Reqit: AND(OR(Course=CMPS.231 Course=CMPS.240) ANY(SET(Course=MATH.205 Course=MATH.237)))</code></li>
+</ul>
+</li>
+<li>
+<p><strong>CMPS 375 - Mobile Robotics</strong>: Requires at least one course from a list of advanced topics</p>
+<ul>
+<li><code>Reqit: ANY(OR(Course=CMPS.311 Course=CMPS.315 Course=CMPS.331 Course=CMPS.342 Course=CMPS.345 Course=CMPS.361 Course=CMPS.373))</code></li>
+</ul>
+</li>
+<li>
+<p><strong>MATH 225 - Multivariable Calculus</strong>: Requires MATH 122</p>
+<ul>
+<li><code>Reqit: Course=MATH.122</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="25-program-level-requirements"><a class="header" href="#25-program-level-requirements">2.5 Program-Level Requirements</a></h3>
+<p>Reqit can also define requirements at the program level:</p>
+<ul>
+<li>
+<p><strong>Cybersecurity BS Program</strong>: Requires completion of CMPS 311, CMPS 305, and CMPS 375, plus 12 credits of CMPS electives</p>
+<ul>
+<li><code>Reqit: AND(ALL(SET(Course=CMPS.311 Course=CMPS.305 Course=CMPS.375)) CREDITS(Course.Subject=CMPS)&gt;=12)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Data Science Certificate</strong>: Requires completion of at least 3 DATA courses and a statistics course</p>
+<ul>
+<li><code>Reqit: AND(COUNT(Course.Subject=DATA)&gt;=3 Course.Subject=STAT)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-advanced-reqit-expressions"><a class="header" href="#3-advanced-reqit-expressions">3. Advanced Reqit Expressions</a></h2>
+<h3 id="31-counting-and-credit-requirements"><a class="header" href="#31-counting-and-credit-requirements">3.1 Counting and Credit Requirements</a></h3>
+<p>Reqit allows for conditions based on the number of courses or total credits:</p>
+<ul>
+<li><code>COUNT(Course.Subject=CSCI) &gt;= 2</code> → Must take at least 2 CSCI courses</li>
+<li><code>CREDITS(Course.Subject=MATH) &gt;= 12</code> → Must complete at least 12 credits in MATH courses</li>
+</ul>
+<h3 id="32-selecting-courses-from-multiple-categories"><a class="header" href="#32-selecting-courses-from-multiple-categories">3.2 Selecting Courses from Multiple Categories</a></h3>
+<ul>
+<li><code>FROM_EACH([Course.Subject=CSCI, Course.Subject=MATH])</code> → Requires at least one course from both Computer Science and Math</li>
+<li><code>FROM_AT_LEAST(2, [Course.Subject=CSCI, Course.Subject=MATH, Course.Subject=STAT])</code> → Requires courses from at least two of these subjects</li>
+</ul>
+<h3 id="33-test-score-and-grade-conditions"><a class="header" href="#33-test-score-and-grade-conditions">3.3 Test Score and Grade Conditions</a></h3>
+<p>Reqit can define minimum scores on standardized tests:</p>
+<ul>
+<li><code>Test=SAT.Math[score&gt;=650]</code> → Requires a Math SAT score of at least 650</li>
+<li><code>Test=ACT.English[score&gt;=25]</code> → Requires an ACT English score of at least 25</li>
+</ul>
+<p>It can also specify a required minimum grade for a course:</p>
+<ul>
+<li><code>Course=CMPS.231[mg=75]</code> → Must have completed CMPS 231 with a minimum grade of 75</li>
+</ul>
+<h2 id="4-conclusion"><a class="header" href="#4-conclusion">4. Conclusion</a></h2>
+<p>Reqit makes it easy to describe course and program prerequisites in a clear and structured way. With simple expressions, you can specify single course requirements, multiple options, credit-based conditions, and even standardized test score requirements. By understanding these rules, you can read and write Reqit expressions with confidence!</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="importing-exporting-and-publishing"><a class="header" href="#importing-exporting-and-publishing">Importing, Exporting, and Publishing</a></h1>
-<p>One of the most important features of <strong>appiversity</strong> is its seamless ability to integrate with other applications. Whether you need to bring data into the system or share it with other platforms, <strong>aAppiversity</strong> makes it simple. Our import and export functionality supports a variety of formats, ensuring you can work with your data in the way that best suits your needs.</p>
+<p>One of the most important features of <strong>appiversity</strong> is its seamless ability to integrate with other applications. Whether you need to bring data into the system or share it with other platforms, <strong>aappiversity</strong> makes it simple. Our import and export functionality supports a variety of formats, ensuring you can work with your data in the way that best suits your needs.</p>
 <p>We understand that working with data across different systems should not be difficult. That’s why <strong>appiversity</strong> supports easy imports and exports in multiple formats, including CSV, JSON, and Excel, allowing you to transfer data with minimal effort. Whether you’re integrating with third-party applications or managing data internally, we provide the flexibility you need to streamline your workflows.</p>
-<p>In addition to our robust import/export features, we offer extensive support for integrations. For more information on how to integrate <strong>Appiversity</strong> with your systems, check out our <a href="publishing/../accounts/support.html">Support Page</a>. We’re here to help ensure your experience is as smooth as possible.</p>
+<p>In addition to our robust import/export features, we offer extensive support for integrations. For more information on how to integrate <strong>appiversity</strong> with your systems, check out our <a href="publishing/../accounts/support.html">Support Page</a>. We’re here to help ensure your experience is as smooth as possible.</p>
 <h2 id="publishing-data"><a class="header" href="#publishing-data">Publishing Data</a></h2>
 <p>So much of the data you put into appiversity is meant to be <strong>published</strong>.  Exporting is one way to facilitate, but we have much easier ways for you to integrate your department, people, workflow, catalog, and other data into existing websites - and that’s through <em>publishing</em>.  Check out the <a href="publishing/./embedding.html">publishing</a> documentation to learn more.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="importing-data"><a class="header" href="#importing-data">Importing data</a></h1>
@@ -1036,7 +1189,7 @@ they are listed in on the submission building screen. You can use the up and dow
 <h2 id="account-management-1"><a class="header" href="#account-management-1">Account Management</a></h2>
 <p>You have full control over your account, including the ability to upgrade, suspend, or delete it. Paid plans include options for account suspension and reactivation within a set retention period.  See <a href="accounts/./upgrading.html">Upgrading</a> and <a href="accounts/./cancel.html">Cancellation/Suspension</a>.</p>
 <h2 id="representative-of-record"><a class="header" href="#representative-of-record">Representative of Record</a></h2>
-<p>Each institution must designate a <a href="accounts/./ror.html">Representative of Record</a>, who is responsible for account validation, billing communications, and managing institutional data. This individual is verified by Appiversity and can appoint additional representatives as needed.</p>
+<p>Each institution must designate a <a href="accounts/./ror.html">Representative of Record</a>, who is responsible for account validation, billing communications, and managing institutional data. This individual is verified by appiversity and can appoint additional representatives as needed.</p>
 <h2 id="data-privacy"><a class="header" href="#data-privacy">Data Privacy</a></h2>
 <p>We prioritize the security of your data. Account holders own their data, and we do not sell or share it. Our multi-tenant cloud application ensures strict access controls, with private hosting options available for additional data isolation.  See more in our <a href="accounts/./data-privacy.html">Data Privacy Policy</a></p>
 <h2 id="private-hosting"><a class="header" href="#private-hosting">Private Hosting</a></h2>

@@ -155,7 +155,131 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="reqit"><a class="header" href="#reqit">Reqit</a></h1>
+                        <h1 id="introduction-to-reqit"><a class="header" href="#introduction-to-reqit">Introduction to Reqit</a></h1>
+<p>Reqit is a simple way to describe course and program requirements in the appiversity Catalog. This guide will help you understand how to use Reqit to express prerequisites and other conditions in an easy-to-follow format.</p>
+<h2 id="1-understanding-basic-reqit-expressions"><a class="header" href="#1-understanding-basic-reqit-expressions">1. Understanding Basic Reqit Expressions</a></h2>
+<p>Reqit statements describe what courses or programs a student needs to take before enrolling in another course or completing a program. These statements use simple rules and keywords to express conditions.</p>
+<h3 id="11-basic-operators"><a class="header" href="#11-basic-operators">1.1 Basic Operators</a></h3>
+<p>Reqit expressions rely on a few key symbols:</p>
+<ul>
+<li><strong>=</strong> means “is equal to”</li>
+<li><strong>&lt;, &gt;, &lt;=, &gt;=</strong> mean “less than” or “greater than”</li>
+<li><strong>AND</strong> means “both conditions must be met”</li>
+<li><strong>OR</strong> means “at least one condition must be met”</li>
+<li><strong>ANY</strong> means “one or more from a list must be met”</li>
+<li><strong>ALL</strong> means “every condition in the set must be met”</li>
+</ul>
+<h3 id="12-course-and-program-attributes"><a class="header" href="#12-course-and-program-attributes">1.2 Course and Program Attributes</a></h3>
+<p>Courses and programs can be specified in different ways:</p>
+<ul>
+<li><strong>By Subject and Number:</strong> <code>Course=CMPS.147</code> means “Computer Science 147”</li>
+<li><strong>By Subject Only:</strong> <code>Course.Subject=MATH</code> means “any Math course”</li>
+<li><strong>By Credits:</strong> <code>Course.Credits&gt;=3</code> means “any course worth at least 3 credits”</li>
+<li><strong>By Minimum Grade:</strong> <code>Course=CMPS.231[mg=75]</code> means “CMPS 231 with a minimum grade of 75”</li>
+<li><strong>By Standardized Test Score:</strong> <code>Test=SAT.Math[score&gt;=650]</code> means “a Math SAT score of at least 650”</li>
+<li><strong>By Program Completion:</strong> <code>Program=CybersecurityBS</code> means “completion of the Cybersecurity Bachelor’s program”</li>
+</ul>
+<h2 id="2-writing-course-and-program-prerequisites"><a class="header" href="#2-writing-course-and-program-prerequisites">2. Writing Course and Program Prerequisites</a></h2>
+<p>Let’s look at how prerequisites are written in Reqit.</p>
+<h3 id="21-simple-prerequisites"><a class="header" href="#21-simple-prerequisites">2.1 Simple Prerequisites</a></h3>
+<ul>
+<li>
+<p><strong>CMPS 147 - Computer Science 1</strong>: Requires a MATH course numbered between 100 and 200</p>
+<ul>
+<li><code>Reqit: OR(AND(Course.Subject=MATH Course.Number&lt;200 Course.Number&gt;=100))</code></li>
+</ul>
+</li>
+<li>
+<p><strong>CMPS 148 - Computer Science 2</strong>: Requires CMPS 147 with a minimum grade of 70</p>
+<ul>
+<li><code>Reqit: Course=CMPS.147[mg=70]</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="22-multiple-course-requirements"><a class="header" href="#22-multiple-course-requirements">2.2 Multiple Course Requirements</a></h3>
+<ul>
+<li><strong>CMPS 311 - Operating Systems</strong>: Requires three specific courses (CRWT 102, CMPS 220, and CMPS 231) and either MATH 205 or MATH 237
+<ul>
+<li><code>Reqit: AND(ALL(SET(Course=CMPS.220 Course=CMPS.231 Course=CRWT.102)) ANY(SET(Course=MATH.205 Course=MATH.237)))</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="23-choosing-from-multiple-options"><a class="header" href="#23-choosing-from-multiple-options">2.3 Choosing from Multiple Options</a></h3>
+<ul>
+<li>
+<p><strong>CMPS 240 - Data Analytics in Python</strong>: Requires either CMPS 148 with a minimum grade of 70, or CMPS 130</p>
+<ul>
+<li><code>Reqit: OR(Course=CMPS.148[mg=70] Course=CMPS.130)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>CMPS 305 - Cyber Security</strong>: Requires either CMPS 231 or CMPS 240</p>
+<ul>
+<li><code>Reqit: OR(Course=CMPS.231 Course=CMPS.240)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="24-complex-requirements"><a class="header" href="#24-complex-requirements">2.4 Complex Requirements</a></h3>
+<ul>
+<li>
+<p><strong>CMPS 331 - Artificial Intelligence</strong>: Requires either CMPS 231 or CMPS 240, plus either MATH 205 or MATH 237</p>
+<ul>
+<li><code>Reqit: AND(OR(Course=CMPS.231 Course=CMPS.240) ANY(SET(Course=MATH.205 Course=MATH.237)))</code></li>
+</ul>
+</li>
+<li>
+<p><strong>CMPS 375 - Mobile Robotics</strong>: Requires at least one course from a list of advanced topics</p>
+<ul>
+<li><code>Reqit: ANY(OR(Course=CMPS.311 Course=CMPS.315 Course=CMPS.331 Course=CMPS.342 Course=CMPS.345 Course=CMPS.361 Course=CMPS.373))</code></li>
+</ul>
+</li>
+<li>
+<p><strong>MATH 225 - Multivariable Calculus</strong>: Requires MATH 122</p>
+<ul>
+<li><code>Reqit: Course=MATH.122</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="25-program-level-requirements"><a class="header" href="#25-program-level-requirements">2.5 Program-Level Requirements</a></h3>
+<p>Reqit can also define requirements at the program level:</p>
+<ul>
+<li>
+<p><strong>Cybersecurity BS Program</strong>: Requires completion of CMPS 311, CMPS 305, and CMPS 375, plus 12 credits of CMPS electives</p>
+<ul>
+<li><code>Reqit: AND(ALL(SET(Course=CMPS.311 Course=CMPS.305 Course=CMPS.375)) CREDITS(Course.Subject=CMPS)&gt;=12)</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Data Science Certificate</strong>: Requires completion of at least 3 DATA courses and a statistics course</p>
+<ul>
+<li><code>Reqit: AND(COUNT(Course.Subject=DATA)&gt;=3 Course.Subject=STAT)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="3-advanced-reqit-expressions"><a class="header" href="#3-advanced-reqit-expressions">3. Advanced Reqit Expressions</a></h2>
+<h3 id="31-counting-and-credit-requirements"><a class="header" href="#31-counting-and-credit-requirements">3.1 Counting and Credit Requirements</a></h3>
+<p>Reqit allows for conditions based on the number of courses or total credits:</p>
+<ul>
+<li><code>COUNT(Course.Subject=CSCI) &gt;= 2</code> → Must take at least 2 CSCI courses</li>
+<li><code>CREDITS(Course.Subject=MATH) &gt;= 12</code> → Must complete at least 12 credits in MATH courses</li>
+</ul>
+<h3 id="32-selecting-courses-from-multiple-categories"><a class="header" href="#32-selecting-courses-from-multiple-categories">3.2 Selecting Courses from Multiple Categories</a></h3>
+<ul>
+<li><code>FROM_EACH([Course.Subject=CSCI, Course.Subject=MATH])</code> → Requires at least one course from both Computer Science and Math</li>
+<li><code>FROM_AT_LEAST(2, [Course.Subject=CSCI, Course.Subject=MATH, Course.Subject=STAT])</code> → Requires courses from at least two of these subjects</li>
+</ul>
+<h3 id="33-test-score-and-grade-conditions"><a class="header" href="#33-test-score-and-grade-conditions">3.3 Test Score and Grade Conditions</a></h3>
+<p>Reqit can define minimum scores on standardized tests:</p>
+<ul>
+<li><code>Test=SAT.Math[score&gt;=650]</code> → Requires a Math SAT score of at least 650</li>
+<li><code>Test=ACT.English[score&gt;=25]</code> → Requires an ACT English score of at least 25</li>
+</ul>
+<p>It can also specify a required minimum grade for a course:</p>
+<ul>
+<li><code>Course=CMPS.231[mg=75]</code> → Must have completed CMPS 231 with a minimum grade of 75</li>
+</ul>
+<h2 id="4-conclusion"><a class="header" href="#4-conclusion">4. Conclusion</a></h2>
+<p>Reqit makes it easy to describe course and program prerequisites in a clear and structured way. With simple expressions, you can specify single course requirements, multiple options, credit-based conditions, and even standardized test score requirements. By understanding these rules, you can read and write Reqit expressions with confidence!</p>
 
                     </main>
 
