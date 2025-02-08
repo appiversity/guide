@@ -1,1 +1,4 @@
 # Degrees and Programs
+Degrees are full academic degrees, granted by the institution. They are recognized outside of the institution - as Bachelor of Science Degrees, for example. They may be composed of academic program (completion), like a major. They can also have additional requirements, such as residency, overall GPA, minimum number of credits, and other institutional achievements. 
+
+Academic programs are majors, minors, concentrations, tracks, and other collections of requirements associated with an academic plan of study. The are not degrees, rather they make up part of a degree. Degrees have additional requirements, such as residency, total credits, etc.
