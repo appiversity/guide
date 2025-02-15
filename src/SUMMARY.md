@@ -32,7 +32,6 @@
     - [Degrees and Programs](./catalog/degrees-programs.md)
     - [Courses](./catalog/courses.md)
     - [Attainments](./catalog/attainments.md)
-    - [Course Attributes](./catalog/course-attributes.md)
     - [Reqit](./reqit/index.md)
 - [Scheduling]()
     - [Schedule Builder]()

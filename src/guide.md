@@ -7,6 +7,6 @@ Welcome to the **appiversity guide**—your complete resource for navigating and
 - [Signing in](./signin/) - Learn how we security log you in, using a combinations of passwords, OTL, and SSO
 - [People & Departments](./departments/) - Manage, list, **publish** your department listings, the faculty and staff who make them up, and the roles they play.
 - [Workflows](./workflow/) - Stop emailing forms and editing PDFs, and start creating auditable approval chains that fit any workflow.
-- [Catalog](./catalog]) - Create your degree programs, course catalogs, and all your requirements while making them easy for students and the public to search and reference.
+- [Catalog](./catalog) - Create your degree programs, course catalogs, and all your requirements while making them easy for students and the public to search and reference.
 - [Bridge and Publish](./publishing/) - Integrate with other systems, publish your data so you can advertise your programs and make your people accessible to the community.
 - [Account Management](./accounts/) - Learn about how you can manage your account, upgrade, downgrade, and get more help!

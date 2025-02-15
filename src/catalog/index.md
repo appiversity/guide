@@ -4,10 +4,10 @@ The appiversity Catalog module is a powerful tool designed to help institutions 
 
 ## Comprehensive Curriculum Modeling
 The catalog enables institutions to model every aspect of their curriculum, including:
-- **[Degree Programs](./degrees-programs.md):** Define complete academic programs with clear requirements.
-- **[Courses and Requirements](./courses.md):** Specify individual courses, their prerequisites, and co-requisites.
-- **[Course Attributes](./course-attributes.md):** Assign attributes such as "Lab," "Writing Intensive," or "Capstone."
-- **[Other Attainments](./attainments.md):** Track standardized test scores, placement scores, career service seminar attendance, or any other non-course requirement.
+- **[Degree, Programs and how to model them](/catalog/degrees-programs.md):** Define complete academic programs with clear requirements.
+- **[Courses and Requirements](/catalog/courses.md):** Specify individual courses, their prerequisites, and co-requisites.
+- **[Course Attributes](/catalog/course-attributes.md):** Assign attributes such as "Lab," "Writing Intensive," or "Capstone."
+- **[Other Attainments](/catalog/attainments.md):** Track standardized test scores, placement scores, career service seminar attendance, or any other non-course requirement.
 
 ### Seamless Navigation and Search
 TheCatalog is designed with usability in mind. Users can:
