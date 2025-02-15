@@ -156,6 +156,31 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="courses"><a class="header" href="#courses">Courses</a></h1>
+<p>Courses are the core of Catalog, they are common requirements of programs and degrees.  Each course has the following proeprties, all editable and importable by anyone with catalog access to your account:</p>
+<ul>
+<li>Subject - the PSYC in PSYC 101 - Introduction to Psychology</li>
+<li>Number - the 101 in PSYC 101 - Introduction to Psychology</li>
+<li>Title - the “Introduction to Psychology” in PSYC 101 - Introduction to Psychology</li>
+<li>Description - a course description, meant for anyone to view.  This should be a few sentences, it’s not the entire syllabus!</li>
+<li>Min, Max, default Credits</li>
+<li>Default Capacity</li>
+<li>External ID</li>
+</ul>
+<p>Note that a <em>course</em> is <strong>not</strong> the same thing as a section being offered in a given term.  A course is the PSYC 101 - Introduction to Psychology.  It doesn’t have a section number, a classroom, a time, an instructor, or anything specific to when a student registers - it is simply a catalog entry.</p>
+<p>Typically Min/Max/Default credits will be the same, but you can specify them individually for courses that are offered in different credit variations.  When you schedule actual sections of the course, you will choose among the range of values.  The same premise holds for “Default Capacity” - specifying 25 students means the course <em>typically</em> has a cap of 25 students - but that won’t stop you from specifying more or less when scheduling a section.</p>
+<h2 id="prerequisites-and-corequisites"><a class="header" href="#prerequisites-and-corequisites">Prerequisites and Corequisites</a></h2>
+<p>All courses have a two <em>registration</em> attainments associated with them - prerequisites and corequisites.  Prerequisites must be complete before a student can register for the course, while corequisites require a student to have already completed the requirement, or be int he process of completing it in the same term.  When you create a course, these requirements are left blank - indicating that the course can be taken without any other requirements being completed.</p>
+<p>Course requirements can be edited, and they can also be imported using the course import module.  In both cases, you create requirements using <a href="/reqit/">Reqit</a>.</p>
+<h2 id="course-attributes"><a class="header" href="#course-attributes">Course Attributes</a></h2>
+<p>Course attributes are additional information items that can be attached to courses.  Attributes are defined globally, and depending on their <em>type</em> may have additional parameters associated with them when applied to specific courses.  Attributes have <em>codes</em> that are short identifiers, names that appear in most places in the app, along with a more detailed description which is available as contextual information.</p>
+<h3 id="attribute-types"><a class="header" href="#attribute-types">Attribute types</a></h3>
+<p>Attributes can be defined as one of <strong>four</strong> different types:</p>
+<ul>
+<li><strong>True/False</strong> (boolean) - the presence of the attribute associated with he course indicates “true”.  For example, a “Lab” attribute, used to tell a student that the course is a lab, would be a good candidate for type <em>boolean</em>.  You’d simply associate it with any course that is a laboratory course.=</li>
+<li><strong>Numeric</strong> - This is a numeric value that is associated with a course.  An example would be “Lab Fee”, representing an additional fee a student will be charged when registering.  Many courses will have this attribute, and course might have different <em>values</em> specified.</li>
+<li><strong>Price</strong> - This is the same thing as numeric - when associated with a course, you will need to specify a numeric value.  The only difference, it is rendered as dollars/cents on the screen.  A lab fee attribute is actually <strong>best</strong> modeled this way, because it read as $75.00 instead of just “75”.</li>
+<li><strong>Text</strong> - text attributes have a name, but when associated with a course you will supply course-specific text along with it.  Continuing with the lab course example, you might have an attribute named “Lab equipment”, and when associated with a lab course, you list what kinds of equipment the student might be required to buy.</li>
+</ul>
 
                     </main>
 

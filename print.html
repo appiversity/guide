@@ -165,7 +165,7 @@
 <li><a href="./signin/">Signing in</a> - Learn how we security log you in, using a combinations of passwords, OTL, and SSO</li>
 <li><a href="./departments/">People &amp; Departments</a> - Manage, list, <strong>publish</strong> your department listings, the faculty and staff who make them up, and the roles they play.</li>
 <li><a href="./workflow/">Workflows</a> - Stop emailing forms and editing PDFs, and start creating auditable approval chains that fit any workflow.</li>
-<li><a href="./catalog%5D">Catalog</a> - Create your degree programs, course catalogs, and all your requirements while making them easy for students and the public to search and reference.</li>
+<li><a href="./catalog">Catalog</a> - Create your degree programs, course catalogs, and all your requirements while making them easy for students and the public to search and reference.</li>
 <li><a href="./publishing/">Bridge and Publish</a> - Integrate with other systems, publish your data so you can advertise your programs and make your people accessible to the community.</li>
 <li><a href="./accounts/">Account Management</a> - Learn about how you can manage your account, upgrade, downgrade, and get more help!</li>
 </ul>
@@ -899,10 +899,10 @@ they are listed in on the submission building screen. You can use the up and dow
 <h2 id="comprehensive-curriculum-modeling"><a class="header" href="#comprehensive-curriculum-modeling">Comprehensive Curriculum Modeling</a></h2>
 <p>The catalog enables institutions to model every aspect of their curriculum, including:</p>
 <ul>
-<li><strong><a href="catalog/./degrees-programs.html">Degree Programs</a>:</strong> Define complete academic programs with clear requirements.</li>
-<li><strong><a href="catalog/./courses.html">Courses and Requirements</a>:</strong> Specify individual courses, their prerequisites, and co-requisites.</li>
-<li><strong><a href="catalog/./course-attributes.html">Course Attributes</a>:</strong> Assign attributes such as “Lab,” “Writing Intensive,” or “Capstone.”</li>
-<li><strong><a href="catalog/./attainments.html">Other Attainments</a>:</strong> Track standardized test scores, placement scores, career service seminar attendance, or any other non-course requirement.</li>
+<li><strong><a href="catalog//catalog/degrees-programs.html">Degree, Programs and how to model them</a>:</strong> Define complete academic programs with clear requirements.</li>
+<li><strong><a href="catalog//catalog/courses.html">Courses and Requirements</a>:</strong> Specify individual courses, their prerequisites, and co-requisites.</li>
+<li><strong><a href="catalog//catalog/course-attributes.html">Course Attributes</a>:</strong> Assign attributes such as “Lab,” “Writing Intensive,” or “Capstone.”</li>
+<li><strong><a href="catalog//catalog/attainments.html">Other Attainments</a>:</strong> Track standardized test scores, placement scores, career service seminar attendance, or any other non-course requirement.</li>
 </ul>
 <h3 id="seamless-navigation-and-search"><a class="header" href="#seamless-navigation-and-search">Seamless Navigation and Search</a></h3>
 <p>TheCatalog is designed with usability in mind. Users can:</p>
@@ -925,134 +925,232 @@ they are listed in on the submission building screen. You can use the up and dow
 <div style="break-before: page; page-break-before: always;"></div><h1 id="degrees-and-programs"><a class="header" href="#degrees-and-programs">Degrees and Programs</a></h1>
 <p>Degrees are full academic degrees, granted by the institution. They are recognized outside of the institution - as Bachelor of Science Degrees, for example. They may be composed of academic program (completion), like a major. They can also have additional requirements, such as residency, overall GPA, minimum number of credits, and other institutional achievements.</p>
 <p>Academic programs are majors, minors, concentrations, tracks, and other collections of requirements associated with an academic plan of study. The are not degrees, rather they make up part of a degree. Degrees have additional requirements, such as residency, total credits, etc.</p>
+<h2 id="degrees-vs-programs---by-example"><a class="header" href="#degrees-vs-programs---by-example">Degrees vs Programs - by example</a></h2>
+<p>Consider a typical BS in Chemistry degree.  This is a <strong>degree</strong>, in that a student earns a diploma, and it is recognized outside the institution as a credential.  A typical BS degree in Chemistry requires a student to complete a few things however:</p>
+<ol>
+<li><strong>General Education requirements</strong> - at many institution, there are courses that <em>all</em> students must take.  Whether your institution calls the General Education or not, you probably have a cluster of courses that all students need to take at some point.</li>
+<li><strong>Course requirements of the Chemistry major</strong> - these are the set of requirements associated with earning the chemistry degree in particular.</li>
+<li>Other non-course related qualifications:
+<ul>
+<li><strong>Minimum GPA</strong></li>
+<li><strong>Minimum number of credits earned at the institution</strong></li>
+<li><strong>Residency</strong> - for example many colleges requires the last 32 credits (or some other number) to be taken at the institution, and not transferred in.</li>
+</ul>
+</li>
+</ol>
+<p>In appiversity, the <strong>degree</strong> is the BS in Chemistry, which is satisfied by completing <em>programs</em> and <em>attainments</em>.  In the example above, <strong>General Education</strong>  is a <strong>program</strong> - of type <em>general requirements cluster</em> - meaning it’s simply a set of required courses (and perhaps attainments).  The <strong>chemistry major requirements</strong> also a <strong>program</strong> - of type <em>undergraduate major</em>.  The other qualification would be modeled as general <em>attainments</em>, which you can read more about <a href="catalog//catalog/attainments.html">here</a></p>
+<h2 id="generalizing-requirements"><a class="header" href="#generalizing-requirements">Generalizing requirements</a></h2>
+<p>Every<strong>thing</strong> in the catalog is considered an “attainment”.  It’s something that, by way of completing a set of requirements, a student <strong>attains</strong>, or <strong>achieves</strong>.  A degree, completion of a program (group of courses), passing individual courses, meeting a minimum GPA, credit hours, test score - they are all things to be “attained”.</p>
+<p>Typically, <strong>Degrees</strong> are the <em>top level</em> attainment.  To earn a degree, you might need to complete a set of <em>programs</em>, <em>courses</em>, and <em>attainments</em>.  To complete a program, you might have to complete <em>other</em> programs (perhaps in a major, you have a cluster for core courses, and a cluster of “electives”).  The model is general, and very flexible.</p>
+<h2 id="types-of-degrees"><a class="header" href="#types-of-degrees">Types of Degrees</a></h2>
+<p>We support the following types of degrees, however it’s easy for us to help you add more.  Ultimately, they are just labels - so if you have degrees that aren’t listed, your degree types can be added very quickly:</p>
+<ol>
+<li>Associates Degree</li>
+<li>Bachelor of Science Degree</li>
+<li>Bachelor of Arts Degree</li>
+<li>Masters Degrees</li>
+<li>Doctoral Degree</li>
+</ol>
+<p>These are simply categories - which help in reporting and searching.   You are in complete control of the <em>requirements</em>.  A BS in Chemistry can have different credit requirements than a BS in Mathematics - it’s completely up to you.  Likewise, both an MS in Social Work and an MBA would typically be listed in Masters, but certainly have very different sets of requirements.</p>
+<h2 id="types-of-programs"><a class="header" href="#types-of-programs">Types of Programs</a></h2>
+<p>Programs have many more types, but the same can be said about programs as degrees - they are simply categories.  We are happy to add more for your account, but we’ll talk you through the pros/cons of adding more - because you might find it better for reporting and searching to keep the number down a bit.</p>
+<p>There are 5 main groups of programs:</p>
+<ol>
+<li>
+<p><strong>Generic Requirement Cluster</strong> - this is a named group of courses.  Using <a href="catalog//reqit/">Reqit</a> you can specify lists of requirements, elective sets, etc - but the idea is that it is a named set of requirements.   These sets of requirements can be referenced in <a href="catalog//reqit/">Reqit</a> by name, which is useful when the cluster is going to be reused (ie General Education would be referenced in every undergraduate degree - but you’d only model the requirements once!).  Clusters are also helpful for students when they are viewing their requirements and degree audits, as they provide convenient grouping of their requirements - making it easier to understand.</p>
+</li>
+<li>
+<p>Major and Field of Study - these are named programs with requirements - typically associated with the name of the parent degree.  For example, if you create a BS <strong>degree</strong> named “Chemistry”, it would likely require a <em>major</em> program requirement of “Chemistry” - among other things.  Since we typically don’t think of an MS or PhD student as “majoring” in something, the label “Field of Study” is used - but it’s the same concept.  An MS in Social Work would likely list as one of it’s requirements a Field of Study program named “Social Work”, which enumerates the requirements.  Note, you <em>can</em> bypass the indirection of degree -&gt; program -&gt; course list if you want, and it’s not uncommon to do so with graduate degrees.  When you bypass programs, you simply list course requirement listings in the degree entity itself.</p>
+</li>
+<li>
+<p>Minor, Certificate, Concentration, Track - these are named programs with requirement that may appear as sub-requirements of degrees or programs, or you might use them as standalone programs.  It’s useful to use these designations when they fit, instead of using generic clusters, because in some places within the catalog you will be able to specifically refer to these specific types of course groups - and using the right category makes life easier.</p>
+</li>
+</ol>
+<h2 id="courses-and-attainments"><a class="header" href="#courses-and-attainments">Courses and Attainments</a></h2>
+<p>Degrees typically do not list specific courses in their requirements, but often list non-course attainments.  Degrees can very frequently list multiple programs.  For example:  if your institution <em>requires</em> a minor to earn a BS degree, a BS in Chemistry would require the major requirements, and then also one minor (an <a href="catalog//reqit/">Reqit</a> makes it easy to specify this).</p>
+<p>Academic programs usually list multiple programs as their <em>sub</em>requirements.  A good example of this would be a “Biochemistry” major, which might create a cluster of chemistry courses, a cluster of biology courses, and a cluster of courses specific to biochemistry.  Modeling all three as program clusters makes it easier to manage the overall requirements - in each of the clusters you might list the courses used to satisfy the requirement.</p>
+<p>Attainments, in general, are sort of a catch all.  Many of them can be tracked automatically, but some need to be marked as completed/incomplete manually.  They are best used for data that can’t be necessarily tied to a course - like a placement test, submission of a form, or global parameters like overall GPA.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="courses"><a class="header" href="#courses">Courses</a></h1>
+<p>Courses are the core of Catalog, they are common requirements of programs and degrees.  Each course has the following proeprties, all editable and importable by anyone with catalog access to your account:</p>
+<ul>
+<li>Subject - the PSYC in PSYC 101 - Introduction to Psychology</li>
+<li>Number - the 101 in PSYC 101 - Introduction to Psychology</li>
+<li>Title - the “Introduction to Psychology” in PSYC 101 - Introduction to Psychology</li>
+<li>Description - a course description, meant for anyone to view.  This should be a few sentences, it’s not the entire syllabus!</li>
+<li>Min, Max, default Credits</li>
+<li>Default Capacity</li>
+<li>External ID</li>
+</ul>
+<p>Note that a <em>course</em> is <strong>not</strong> the same thing as a section being offered in a given term.  A course is the PSYC 101 - Introduction to Psychology.  It doesn’t have a section number, a classroom, a time, an instructor, or anything specific to when a student registers - it is simply a catalog entry.</p>
+<p>Typically Min/Max/Default credits will be the same, but you can specify them individually for courses that are offered in different credit variations.  When you schedule actual sections of the course, you will choose among the range of values.  The same premise holds for “Default Capacity” - specifying 25 students means the course <em>typically</em> has a cap of 25 students - but that won’t stop you from specifying more or less when scheduling a section.</p>
+<h2 id="prerequisites-and-corequisites"><a class="header" href="#prerequisites-and-corequisites">Prerequisites and Corequisites</a></h2>
+<p>All courses have a two <em>registration</em> attainments associated with them - prerequisites and corequisites.  Prerequisites must be complete before a student can register for the course, while corequisites require a student to have already completed the requirement, or be int he process of completing it in the same term.  When you create a course, these requirements are left blank - indicating that the course can be taken without any other requirements being completed.</p>
+<p>Course requirements can be edited, and they can also be imported using the course import module.  In both cases, you create requirements using <a href="catalog//reqit/">Reqit</a>.</p>
+<h2 id="course-attributes"><a class="header" href="#course-attributes">Course Attributes</a></h2>
+<p>Course attributes are additional information items that can be attached to courses.  Attributes are defined globally, and depending on their <em>type</em> may have additional parameters associated with them when applied to specific courses.  Attributes have <em>codes</em> that are short identifiers, names that appear in most places in the app, along with a more detailed description which is available as contextual information.</p>
+<h3 id="attribute-types"><a class="header" href="#attribute-types">Attribute types</a></h3>
+<p>Attributes can be defined as one of <strong>four</strong> different types:</p>
+<ul>
+<li><strong>True/False</strong> (boolean) - the presence of the attribute associated with he course indicates “true”.  For example, a “Lab” attribute, used to tell a student that the course is a lab, would be a good candidate for type <em>boolean</em>.  You’d simply associate it with any course that is a laboratory course.=</li>
+<li><strong>Numeric</strong> - This is a numeric value that is associated with a course.  An example would be “Lab Fee”, representing an additional fee a student will be charged when registering.  Many courses will have this attribute, and course might have different <em>values</em> specified.</li>
+<li><strong>Price</strong> - This is the same thing as numeric - when associated with a course, you will need to specify a numeric value.  The only difference, it is rendered as dollars/cents on the screen.  A lab fee attribute is actually <strong>best</strong> modeled this way, because it read as $75.00 instead of just “75”.</li>
+<li><strong>Text</strong> - text attributes have a name, but when associated with a course you will supply course-specific text along with it.  Continuing with the lab course example, you might have an attribute named “Lab equipment”, and when associated with a lab course, you list what kinds of equipment the student might be required to buy.</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="attainments"><a class="header" href="#attainments">Attainments</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="course-attributes"><a class="header" href="#course-attributes">Course Attributes</a></h1>
+<p>Every<strong>thing</strong> in catalog <em>is</em> an attainment.  Degrees, programs, courses - they are all things that students complete.  There are some requirements that don’t fit into the <em>course</em> bucket though.  Examples:</p>
+<ul>
+<li>Minimum graduation GPA</li>
+<li>Minimum number of credits</li>
+<li>Tuition bill paid</li>
+<li>Placement testing scores</li>
+</ul>
+<p>Your institution might have many more.  For all of the <em>requirement</em> that aren’t course completions, or sets of course completions, we have generic <strong>attainments</strong>.  You can create attainments if you have the <em>catalog</em> privilege.  Attainments have a name, description, and a type - Yes/No, quantity ( a number) , or Test Score.  We can easily create more types for your account if you need them - just ask!  In most cases though, these types cover the use cases institutions use generic attributes for.</p>
+<p>Attainments can be directly referenced in <a href="catalog//reqit/">Reqit</a> requirement expressions.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="introduction-to-reqit"><a class="header" href="#introduction-to-reqit">Introduction to Reqit</a></h1>
 <p>Reqit is a simple way to describe course and program requirements in the appiversity Catalog. This guide will help you understand how to use Reqit to express prerequisites and other conditions in an easy-to-follow format.</p>
-<h2 id="1-understanding-basic-reqit-expressions"><a class="header" href="#1-understanding-basic-reqit-expressions">1. Understanding Basic Reqit Expressions</a></h2>
 <p>Reqit statements describe what courses or programs a student needs to take before enrolling in another course or completing a program. These statements use simple rules and keywords to express conditions.</p>
-<h3 id="11-basic-operators"><a class="header" href="#11-basic-operators">1.1 Basic Operators</a></h3>
-<p>Reqit expressions rely on a few key symbols:</p>
+<p>Let’s start with an example:  Suppose a course requires that a student completes MATH 101 - Calculus 1 before registering.  Within the course’s requirements editor, you would be able to input this requirements using the <em>course</em> Reqit syntax:  <code>Course=MATH-101</code>.</p>
+<p><img src="reqit/../images/requit-courseequals.png" alt="course equals" /></p>
+<p>The <code>Course=MATH-101</code> is an example of a <em>course match</em> syntax, and Reqit supports Course matching, program matching, and attainment matchers</p>
+<h2 id="course-matchers"><a class="header" href="#course-matchers">Course Matchers</a></h2>
+<p>The text <code>Course=MATH-101</code> <em>resolves</em> to a specific course- MATH 101 Calculus 1.  The syntax can also be written with a dot notation as <code>Course=MATH.101</code>.</p>
+<p>Its important to remember that there should be <em>no spaces</em> between the <code>Course</code>, <code>=</code>, and <code>Subject.Number</code> tokens.</p>
+<h3 id="specifying-sets-of-courses"><a class="header" href="#specifying-sets-of-courses">Specifying sets of courses</a></h3>
+<p>You are not limited to specifying a specific course.   The course syntax supports selecting courses based on specific attributes as well.</p>
+<h4 id="by-subject"><a class="header" href="#by-subject">By Subject</a></h4>
+<p>You can select <em>all</em> MATH courses using <code>Course.Subject=MATH</code>, which resolves to all the courses with subject of MATH.</p>
+<h4 id="by-number"><a class="header" href="#by-number">By Number</a></h4>
+<p>You can select courses with specific numbers, and use <code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code> to refine your selection.  For example, <code>Course.Number=101</code> <em>resolves</em> to all courses in the catalog that have a course number of <code>101</code>.  Likewise <code>Course.Number&gt;=400</code> resolves to all courses with a number 400 or above.</p>
+<h4 id="by-credit"><a class="header" href="#by-credit">By Credit</a></h4>
+<p>You can specifically select courses with a certain number of credits.  For example, finding all 4-credit courses is done with <code>Course.Credits=4</code>.  You can use <code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, <code>!=</code> to refine your selection.</p>
+<h4 id="by-grade"><a class="header" href="#by-grade">By Grade</a></h4>
+<p>You can specify a course as being a requirement that can be met <em>only</em> if a specific grade was reached.  By default, specifying a course as a requirement means the student must <strong>pass</strong> the course - which we default to a minimum grade of 60.00.  You can change this - for example if a student needs to have taken Calculus 1 and achieved a 80% or better, then you can write `Course=MATH.101(mg=80)</p>
+<h4 id="by-attribute"><a class="header" href="#by-attribute">By Attribute</a></h4>
+<p>Select courses by attributes using the <code>Course.Attribute</code> syntax. This syntax can specify courses with attributes using the <code>=</code> or <code>!=</code> operators.  For example, <code>Course.Attribute=GE</code> resolves to all courses that have the GE (General Education) attribute.</p>
+<h4 id="by-prerequisitecorequisite"><a class="header" href="#by-prerequisitecorequisite">By Prerequisite/Corequisite</a></h4>
+<p>One of the hardest requirements to model is often when a course requires a student complete a course that requires something else.  An example, perhaps you want to say that in order to take MATH 400, the student must have completed a course that requires MATH 101 as a prerequisite.  This is a large set of courses, and the courses may have different subjects, and certainly can be at different number ranges.  With Reqit, you can specify this requirement directly using <code>Course.PreReq::Course=MATH.101</code>.  That expression finds every course that lists MATH 101 as one of it’s prerequisites.  <code>Course.CoReq::</code> does the same thing for corequisites.</p>
+<p><img src="reqit/../images/reqit-course-prereq.png" alt="course equals" /></p>
+<h2 id="combining-selections-with-and-and-or"><a class="header" href="#combining-selections-with-and-and-or">Combining selections with <code>AND</code> and <code>OR</code></a></h2>
+<p>You can build arbitrarily complex sets of course requirements by combining all of the selection operators above with <code>AND</code> and <code>OR</code>.</p>
+<p>Again, by example:  Suppose we want to select courses that have a subject of MATH and course number <em>greater or equal to 200</em>.</p>
 <ul>
-<li><strong>=</strong> means “is equal to”</li>
-<li><strong>&lt;, &gt;, &lt;=, &gt;=</strong> mean “less than” or “greater than”</li>
-<li><strong>AND</strong> means “both conditions must be met”</li>
-<li><strong>OR</strong> means “at least one condition must be met”</li>
-<li><strong>ANY</strong> means “one or more from a list must be met”</li>
-<li><strong>ALL</strong> means “every condition in the set must be met”</li>
+<li><code>Course.Subject=MATH</code> resolves to all MATH courses (any number)</li>
 </ul>
-<h3 id="12-course-and-program-attributes"><a class="header" href="#12-course-and-program-attributes">1.2 Course and Program Attributes</a></h3>
-<p>Courses and programs can be specified in different ways:</p>
+<p><img src="reqit/../images/reqit-course-subject.png" alt="course equals" /></p>
 <ul>
-<li><strong>By Subject and Number:</strong> <code>Course=CMPS.147</code> means “Computer Science 147”</li>
-<li><strong>By Subject Only:</strong> <code>Course.Subject=MATH</code> means “any Math course”</li>
-<li><strong>By Credits:</strong> <code>Course.Credits&gt;=3</code> means “any course worth at least 3 credits”</li>
-<li><strong>By Minimum Grade:</strong> <code>Course=CMPS.231[mg=75]</code> means “CMPS 231 with a minimum grade of 75”</li>
-<li><strong>By Standardized Test Score:</strong> <code>Test=SAT.Math[score&gt;=650]</code> means “a Math SAT score of at least 650”</li>
-<li><strong>By Program Completion:</strong> <code>Program=CybersecurityBS</code> means “completion of the Cybersecurity Bachelor’s program”</li>
+<li><code>Course.Number&gt;=100</code> resolves to all courses with number &gt;= 200 (any subject)</li>
 </ul>
-<h2 id="2-writing-course-and-program-prerequisites"><a class="header" href="#2-writing-course-and-program-prerequisites">2. Writing Course and Program Prerequisites</a></h2>
-<p>Let’s look at how prerequisites are written in Reqit.</p>
-<h3 id="21-simple-prerequisites"><a class="header" href="#21-simple-prerequisites">2.1 Simple Prerequisites</a></h3>
+<p><img src="reqit/../images/reqit-course-nuymber.png" alt="course equals" /></p>
 <ul>
-<li>
-<p><strong>CMPS 147 - Computer Science 1</strong>: Requires a MATH course numbered between 100 and 200</p>
+<li><code>AND(Course.Subject=MATH Course.Number&gt;=100)</code> resolves to courses with subject of MATH and course number &gt;= 200.</li>
+</ul>
+<p><img src="reqit/../images/reqit-course-and.png" alt="course equals" /></p>
+<p>Reqit always resolves to a <em>set</em> of requirements (in this case, courses).  The operators can be used in a nested fashion to create more detailed requirement lists.</p>
+<p>As a final example of using just <code>AND</code> and <code>OR</code>, the following Reqit will resolve to “Either CMPS 450, or any 3 credit or greater MATH or STAT courses with a course number greater than 200”:</p>
+<pre><code>OR(
+  Course=CMPS.450 
+  AND(
+    Course.Credits&gt;=3 
+    OR(Course.Subject=MATH Course.Subject=STAT) 
+    Course.Number&gt;=200
+  )
+)
+</code></pre>
+<p>Note that <code>AND</code> and <code>OR</code> require you to provide a list of expressions within the <code>(</code> and <code>)</code>, separated by <strong>white space</strong>.  You can use spaces, or tabs/new lines.</p>
+<h2 id="set-operators---fulfilling-multiple-categories"><a class="header" href="#set-operators---fulfilling-multiple-categories">Set Operators - Fulfilling multiple categories</a></h2>
+<p>The course matchers above resolve to <em>sets</em> of courses - and the requirement is that a student must complete <strong>one</strong> course among that set to satisfy the requirement. For example, <code>Course.Subject=MATH</code> means a student must take one course with MATH as the subject.</p>
+<p>What if you want to say a student must take one MATH course and one CMPS course?  You might initially think <code>OR</code> or <code>AND</code> are needed, however those operators are still creating <em>one</em> set, from which a student must take one.</p>
+<p>Instead, you will use a <em>set</em> operator such as <code>FROM_EACH</code>, <code>FROM_AT_LEAST</code>.</p>
+<p>To model “one MATH course and one CMPS course”, you’d write the following:</p>
+<pre><code>FROM_EACH(Course.Subject=MATH Course.Subject=CMPS)
+</code></pre>
+<p><img src="reqit/../images/reqit-course-fromeach.png" alt="from each" /></p>
+<p>Note the way the <code>FROM_EACH</code> has treated each of the course matches as <strong>distinct</strong> sets, and that the student must complete one course <strong>from each</strong> of the sets.</p>
+<p>As always, anywhere you see a course match in these examples, any other course match syntax can be used as well.  You can also use <code>AND</code> and <code>OR</code>.</p>
+<p><code>FROM_AT_LEAST</code> is a variant of <code>FROM_EACH</code> that allows you to specify a minimum number of sets that a student must complete one course from.  For example, if a student must complete a course from at least 2 of the following three groups:  MATH, CMPS, or PHYS courses, you’d use <code>FROM_AT_LEAST</code></p>
+<pre><code>FROM_AT_LEAST(2, Course.Subject=MATH Course.Subject=CMPS Course.Subject=PHYS)
+
+</code></pre>
+<h2 id="counting---fulfilling-multiple-courses-within-a-single-category"><a class="header" href="#counting---fulfilling-multiple-courses-within-a-single-category">Counting - Fulfilling multiple courses within a single category</a></h2>
+<p>In the previous section, we saw how <code>FROM_EACH</code> and <code>FROM_AT_LEAST</code> lets you specify multiple <em>sets</em> of courses, and how many sets the students must find one course within to take.  But what if you need a student to take <strong>two</strong> courses from one set of courses?</p>
+<p>The following does <strong>not</strong> mean a student must take 2 MATH courses:</p>
+<pre><code>FROM_AT_LEAST(2, Course.Subject=MATH)
+</code></pre>
+<p>Instead, it means a student must take one course from at least 2 of the following sets - and then only specifies one set!  In fact, there is no way a student can complete that requirement!</p>
+<p>Instead, use <code>AT_LEAST</code>:</p>
+<pre><code>AT_LEAST(2, Course.Subject=MATH)
+</code></pre>
+<p>The <code>AT_LEAST</code> operator is one of several operators that operate on <em>single</em> sets of courses, but let you specify how many courses among the single set should be completed.</p>
 <ul>
-<li><code>Reqit: OR(AND(Course.Subject=MATH Course.Number&lt;200 Course.Number&gt;=100))</code></li>
+<li><code>AT_LEAST(N, set)</code> - complete at least N among “set”</li>
+<li><code>AT_MOST(N, set)</code> - complete no more than N among “set” (this is rare)</li>
+<li><code>EXACTLY(N, set)</code> - complete exactly N among “set” (this is rare)</li>
+<li><code>ANY(set)</code> - complete at least one course from the set (this is sort of redundant, because any “set” notation results in the same)</li>
+<li><code>ALL(set)</code> - complete every course in the set</li>
 </ul>
-</li>
-<li>
-<p><strong>CMPS 148 - Computer Science 2</strong>: Requires CMPS 147 with a minimum grade of 70</p>
+<p>The operators above work on a single set.  For simple expressions this can be straightforward - as in <code>AT_LEAST(2, Course.Subject=MATH)</code>.  For more complex expressions, you may need to use the <code>SET</code> operator to combine course matches.  For example, if you want students to pick 2 from a set of 3 courses, you might try the following:</p>
+<pre><code>AT_LEAST(3, Course=CMPS.101 Course=MATH.101 Course=STATS.101)  x - syntax error!
+</code></pre>
+<p>Ordinarily, <code>Course=CMPS.101 Course=MATH.101 Course=STATS.101</code> would resolve a the set of three courses as indicated, by when used in an <code>AT_LEAST</code> expression, you need to wrap the matchers in a <code>SET</code> operator</p>
+<pre><code>AT_LEAST(3, SET(Course=CMPS.101 Course=MATH.101 Course=STATS.101))  + Good!
+</code></pre>
+<p>Note that you could have also used the OR operator:</p>
+<pre><code>AT_LEAST(3, OR(Course=CMPS.101 Course=MATH.101 Course=STATS.101))  + Good!
+</code></pre>
+<h2 id="with-criteria"><a class="header" href="#with-criteria">With Criteria</a></h2>
+<p>Finally, you will often need to define requirements that require a fixed number of courses, or credits among such courses, to fit some criteria.</p>
+<p>Here’s a silly example, but illustrative of the syntax.  Suppose you want the student to take 3 courses with a course number &lt; 300.</p>
+<p>One simple way to do this:  <code>AT_LEAST(3, Course.Number&lt;300)</code></p>
+<p>A more complex way would be to use an optional <em>validation</em> parameter:  <code>AT_LEAST(3, Course.*, COUNT(Course.Number&lt;300) &lt; 1)</code></p>
+<p>Here, the <code>Course.*</code> wildcard is used to select <em>all courses</em>*, and then the <code>COUNT</code> operator is applied to the set to make sure that the three courses the students complete all have a course number less than 300.  Those two expression yield the same requirement, but the second has some more flexibility.  The key is that the <code>COUNT</code> operator is being applied <strong>after</strong> the set itself has been completed - it’s a validation step.  The validation step is applied to each course the student has taken, and unless the validation is met by the course, it won’t be counted towards completing the set.</p>
+<p>To see how this can actually help you, let’s make this a bit more complex:</p>
 <ul>
-<li><code>Reqit: Course=CMPS.147[mg=70]</code></li>
+<li>“At least 5 courses MATH courses, no more than 2 can have a course number &lt; 300</li>
 </ul>
-</li>
-</ul>
-<h3 id="22-multiple-course-requirements"><a class="header" href="#22-multiple-course-requirements">2.2 Multiple Course Requirements</a></h3>
-<ul>
-<li><strong>CMPS 311 - Operating Systems</strong>: Requires three specific courses (CRWT 102, CMPS 220, and CMPS 231) and either MATH 205 or MATH 237
-<ul>
-<li><code>Reqit: AND(ALL(SET(Course=CMPS.220 Course=CMPS.231 Course=CRWT.102)) ANY(SET(Course=MATH.205 Course=MATH.237)))</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="23-choosing-from-multiple-options"><a class="header" href="#23-choosing-from-multiple-options">2.3 Choosing from Multiple Options</a></h3>
-<ul>
-<li>
-<p><strong>CMPS 240 - Data Analytics in Python</strong>: Requires either CMPS 148 with a minimum grade of 70, or CMPS 130</p>
-<ul>
-<li><code>Reqit: OR(Course=CMPS.148[mg=70] Course=CMPS.130)</code></li>
-</ul>
-</li>
-<li>
-<p><strong>CMPS 305 - Cyber Security</strong>: Requires either CMPS 231 or CMPS 240</p>
-<ul>
-<li><code>Reqit: OR(Course=CMPS.231 Course=CMPS.240)</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="24-complex-requirements"><a class="header" href="#24-complex-requirements">2.4 Complex Requirements</a></h3>
-<ul>
-<li>
-<p><strong>CMPS 331 - Artificial Intelligence</strong>: Requires either CMPS 231 or CMPS 240, plus either MATH 205 or MATH 237</p>
-<ul>
-<li><code>Reqit: AND(OR(Course=CMPS.231 Course=CMPS.240) ANY(SET(Course=MATH.205 Course=MATH.237)))</code></li>
-</ul>
-</li>
-<li>
-<p><strong>CMPS 375 - Mobile Robotics</strong>: Requires at least one course from a list of advanced topics</p>
-<ul>
-<li><code>Reqit: ANY(OR(Course=CMPS.311 Course=CMPS.315 Course=CMPS.331 Course=CMPS.342 Course=CMPS.345 Course=CMPS.361 Course=CMPS.373))</code></li>
-</ul>
-</li>
-<li>
-<p><strong>MATH 225 - Multivariable Calculus</strong>: Requires MATH 122</p>
-<ul>
-<li><code>Reqit: Course=MATH.122</code></li>
-</ul>
-</li>
-</ul>
-<h3 id="25-program-level-requirements"><a class="header" href="#25-program-level-requirements">2.5 Program-Level Requirements</a></h3>
-<p>Reqit can also define requirements at the program level:</p>
-<ul>
-<li>
-<p><strong>Cybersecurity BS Program</strong>: Requires completion of CMPS 311, CMPS 305, and CMPS 375, plus 12 credits of CMPS electives</p>
-<ul>
-<li><code>Reqit: AND(ALL(SET(Course=CMPS.311 Course=CMPS.305 Course=CMPS.375)) CREDITS(Course.Subject=CMPS)&gt;=12)</code></li>
-</ul>
-</li>
-<li>
-<p><strong>Data Science Certificate</strong>: Requires completion of at least 3 DATA courses and a statistics course</p>
-<ul>
-<li><code>Reqit: AND(COUNT(Course.Subject=DATA)&gt;=3 Course.Subject=STAT)</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="3-advanced-reqit-expressions"><a class="header" href="#3-advanced-reqit-expressions">3. Advanced Reqit Expressions</a></h2>
-<h3 id="31-counting-and-credit-requirements"><a class="header" href="#31-counting-and-credit-requirements">3.1 Counting and Credit Requirements</a></h3>
-<p>Reqit allows for conditions based on the number of courses or total credits:</p>
-<ul>
-<li><code>COUNT(Course.Subject=CSCI) &gt;= 2</code> → Must take at least 2 CSCI courses</li>
-<li><code>CREDITS(Course.Subject=MATH) &gt;= 12</code> → Must complete at least 12 credits in MATH courses</li>
-</ul>
-<h3 id="32-selecting-courses-from-multiple-categories"><a class="header" href="#32-selecting-courses-from-multiple-categories">3.2 Selecting Courses from Multiple Categories</a></h3>
-<ul>
-<li><code>FROM_EACH([Course.Subject=CSCI, Course.Subject=MATH])</code> → Requires at least one course from both Computer Science and Math</li>
-<li><code>FROM_AT_LEAST(2, [Course.Subject=CSCI, Course.Subject=MATH, Course.Subject=STAT])</code> → Requires courses from at least two of these subjects</li>
-</ul>
-<h3 id="33-test-score-and-grade-conditions"><a class="header" href="#33-test-score-and-grade-conditions">3.3 Test Score and Grade Conditions</a></h3>
-<p>Reqit can define minimum scores on standardized tests:</p>
-<ul>
-<li><code>Test=SAT.Math[score&gt;=650]</code> → Requires a Math SAT score of at least 650</li>
-<li><code>Test=ACT.English[score&gt;=25]</code> → Requires an ACT English score of at least 25</li>
-</ul>
-<p>It can also specify a required minimum grade for a course:</p>
-<ul>
-<li><code>Course=CMPS.231[mg=75]</code> → Must have completed CMPS 231 with a minimum grade of 75</li>
-</ul>
-<h2 id="4-conclusion"><a class="header" href="#4-conclusion">4. Conclusion</a></h2>
-<p>Reqit makes it easy to describe course and program prerequisites in a clear and structured way. With simple expressions, you can specify single course requirements, multiple options, credit-based conditions, and even standardized test score requirements. By understanding these rules, you can read and write Reqit expressions with confidence!</p>
+<p>This example would be tough without the criteria syntax.  You are selecting 5 courses from a set of Math courses - and students can use up to 2 courses with numbers less than 300.  You might think about it instead as two sets - under 300 and over 300, and the student completes 2 from under 300, and 3 from over 300 - however this precludes a student from just taking 5 300-level courses (perhaps they were waived from prerequisites!)</p>
+<p>This can be solved with the following Reqit:</p>
+<pre><code>AT_LEAST(5, OR(Course.Subject=MATH), COUNT(Course.Number&lt;300) &lt; 2)
+</code></pre>
+<p>In addition to <code>COUNT</code>, you can also apply credits to the criteria:</p>
+<pre><code>AT_LEAST(5, OR(Course.Subject=MATH), CREDITS(Course.Number&lt;300) &lt; 8)
+</code></pre>
+<p>This means no more than 8 credits can be awarded from courses with a number less than 300.</p>
+<h2 id="matching-on-programs"><a class="header" href="#matching-on-programs">Matching on Programs</a></h2>
+<p>So far, we’ve reviewed all the operators you can use - but we’ve restricted ourselves to <em>courses</em>.  Anywhere courses can be used, programs and attainments can also be used.  This allows you to use the same Reqit skills you develop specifying course prerequisites to program requirements in general.  It also let’s you mix and match when creating those requirements.</p>
+<p>Program matchers look similar to course matchers, but they require you to specify the <em>type</em> of academic program.  The syntax uses <code>Program::&lt;type&gt;.&lt;leve&gt;</code> notation, where <code>&lt;type&gt;</code> is one of <code>Major</code>, <code>Minor</code>, <code>Certificate</code>, <code>Concentration</code>, <code>Track</code>, or <code>Cluster</code> and level is one of <code>ug</code>, <code>grad</code>, <code>post-g</code>, <code>doc</code>, <code>PD</code> (post doc), <code>PRO</code> (professional), and <code>CLUS</code> (cluster).</p>
+<p>To select any undergraduate major, <code>Program::Major:UG</code>.  To select any graduate level “major” (field of study), use <code>Program::Major.G</code>.</p>
+<p>You can specify programs by their code, with <code>=</code> and <code>!=</code>.  So, the undergraduate Chemistry major would be <code>Program::Major.UG=CHEM</code>.</p>
+<p>There are addiitonal filters available on programs, such as <em>cumulative</em> number of credits within the major, or <em>cumulative</em> GPA.  To specify that the Math undegraduate program must be completed, with 128 credits, and a 3.5 GPA, you could use the following syntax:  <code>Program::Major:UG==MATH[gpa=3.5 credits=128]</code>.</p>
+<p>There are also situations where you want to select programs <em>from certain departments</em>.  Within the catalog, you can associate courses and programs with departments, and then use Reqit to select based on those connections.</p>
+<p>For example, let’s imagine a Computer Science department with majors in Computer Science, Data Science, Information Technology, and Cybersecurity.  We could specify that someone must major in <em>any</em> of those by using the following:</p>
+<pre><code>OR(
+    Program::Major.UG=CMPS 
+    Program::Major.UG=DATA 
+    Program::Major.UG=IT 
+    Program::Major.UG=CYBER
+)
+</code></pre>
+<p>Or, more succinctly, we could writ this as follows (assuming the Computer Science department’s code is <code>CS</code>).</p>
+<pre><code>Program:Major.UG.Department=CS
+</code></pre>
+<p>Not only is the second easier to write, but if the Computer Science department decides to offer an undergraduate major in Software Engineering, it will <em>automatically</em> be included in that set.  Reqit is <em>resolved</em> based on the <strong>current</strong> catalog, always.</p>
+<h2 id="matching-on-attainments"><a class="header" href="#matching-on-attainments">Matching on Attainments</a></h2>
+<p>Attainments can be referenced using Attainment.[code] and Score.[code], where code is the code assigned to the attainment.</p>
+<p>For example, if you’ve added an attainment called SAT with type <strong>score</strong>, you can specify that the student must have scored higher than 650 as follows:</p>
+<pre><code>Score=SAT.Math&gt;=650
+</code></pre>
+<p>Likewise, yes/no boolean Attainments can be expressed simply by their code.  A requirement that the student meets “Residency” would be simply <code>Attainment.Residency</code>, where Residency is the code for the residency requirement.</p>
+<h2 id="4-future-proofing-requirements"><a class="header" href="#4-future-proofing-requirements">4. Future Proofing Requirements</a></h2>
+<p>The Reqit language is design to future proof your requirements.  If you’ve managed catalogs, you know that requirements change from year to year, and many times those changes are indirect.</p>
+<p>Let’s use one of the example from before, for a course (let’s say CMPS 230) that requires a student to take 1 course that requires Calculus.</p>
+<p>A naive approach to this would be to scan the catalog, looking for all of the course that require Calculus.  Then, you could list <em>each</em> one of those in an <code>OR</code>:</p>
+<pre><code>OR(Course=MATH.102 Course=MATH.201 Course=CMPS.123 ....)
+
+</code></pre>
+<p>There will be a bunch - but hey, you only need to write it once…  <strong>wrong</strong>.</p>
+<p>What happens next year, when a new course get’s added to the catalog, and that new course requires Calculus.  Will you remember updated CMPS 230’s requirements?  It’s unlikely.</p>
+<p>By writing Reqit to be as general as possible, you avoid these issues.  Using <code>Course.PreReq::Course=MATH.101</code> is not only much shorter to write, but <strong>it’s always up to date</strong>.  Next year, when you create a new course, if it matches that criteria, it will be included in the requirements set of CMPS 230 - automatically!</p>
+<p>The goal of Reqit is to take you away from enumerating every single requirement, and let you express things at a higher level - robust to changes across academic years.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="importing-exporting-and-publishing"><a class="header" href="#importing-exporting-and-publishing">Importing, Exporting, and Publishing</a></h1>
 <p>One of the most important features of <strong>appiversity</strong> is its seamless ability to integrate with other applications. Whether you need to bring data into the system or share it with other platforms, <strong>aappiversity</strong> makes it simple. Our import and export functionality supports a variety of formats, ensuring you can work with your data in the way that best suits your needs.</p>
 <p>We understand that working with data across different systems should not be difficult. That’s why <strong>appiversity</strong> supports easy imports and exports in multiple formats, including CSV, JSON, and Excel, allowing you to transfer data with minimal effort. Whether you’re integrating with third-party applications or managing data internally, we provide the flexibility you need to streamline your workflows.</p>
